@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary-fixed": "#dbe1ff", "on-tertiary-container": "#bdffdb", "surface-dim": "#d8dadc", "on-tertiary": "#ffffff", "tertiary-container": "#007d55", "on-primary-fixed-variant": "#003ea8", "secondary-fixed-dim": "#bec6e0", "on-secondary-fixed": "#131b2e", "primary-fixed-dim": "#b4c5ff", "on-primary-fixed": "#00174b", "on-primary-container": "#eeefff", "inverse-primary": "#b4c5ff", "surface-container-highest": "#e0e3e5", "on-background": "#191c1e", "on-tertiary-fixed": "#002113", "on-secondary-fixed-variant": "#3f465c", "on-secondary": "#ffffff", "background": "#f7f9fb", "primary": "#004ac6", "inverse-surface": "#2d3133", "primary-container": "#2563eb", "on-secondary-container": "#5c647a", "on-error": "#ffffff", "on-error-container": "#93000a", "surface-container": "#eceef0", "surface": "#f7f9fb", "outline-variant": "#c3c6d7", "surface-variant": "#e0e3e5", "on-primary": "#ffffff", "error": "#ba1a1a", "outline": "#737686", "on-tertiary-fixed-variant": "#005236", "surface-container-lowest": "#ffffff", "secondary": "#565e74", "secondary-container": "#dae2fd", "tertiary": "#006242", "tertiary-fixed-dim": "#4edea3", "error-container": "#ffdad6", "tertiary-fixed": "#6ffbbe", "secondary-fixed": "#dae2fd", "surface-container-high": "#e6e8ea", "inverse-on-surface": "#eff1f3", "on-surface": "#191c1e", "on-surface-variant": "#434655", "surface-bright": "#f7f9fb", "surface-tint": "#0053db", "surface-container-low": "#f2f4f6" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-mobile": "0.75rem", "margin-mobile": "1rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "space-md": "1rem", "margin": "2rem" }, "fontFamily": { "headline-lg-mobile": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "body-sm": ["Inter"], "label-lg": ["Inter"], "headline-xl": ["Plus Jakarta Sans"], "body-md": ["Inter"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"] }, "fontSize": { "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700"}], "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400"}], "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}], "headline-md": ["22px", {"lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600"}], "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700"}], "body-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400"}], "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}], "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "800"}], "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400"}], "headline-xl-mobile": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "800"}], "headline-sm": ["18px", {"lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600"}] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm min-w-0"><img alt="SocialLaunch Brand Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1Wqa1OJJBL2QBFo-TwS0FNAikT-uc9FF7nUnB63TwdDne3lIQJIGVe5wXVt7tj2nvZUaQ1bB0TPLFg6ITP5XXtKtagPGwYeaWPVMWvCy5K6FupF5MqfZS5HeIfIY9lOnV10Wbf0hj2d1d8yIlO0YUk5E8JKPL1JN0yNajy6rEfeuHt2Qqu54TimZF92JyMbzTsxlmYEcFz6Ex7SwDyRDgfGqc3MgzU3z4YwToKi2IP9-siuWJZ3WhTGvA"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-on-surface truncate tracking-tight">SocialLaunch</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate -mt-0.5">Vitrina Pública</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><div class="flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed shadow-[0_1px_4px_rgba(0,0,0,0.04)]"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm uppercase tracking-wider">⚡ En Vivo</span></div><button class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container active:scale-95 transition-transform" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhp7RIkspaLIxlvCZH_k7F5Tvk2oKQnnTDESjH5wd_QA6IYzm7nVY9kt5Ssza84UnYr-LX2IZrmtv4hpPGVfAliZwiURIj-D_v1J-9OpFbb1EkbLLCoAmm10ANWCKAj7a9g7G1eVaoI65uoMNT2WX9ABHweMSO5RqowdkDd_4NyaKVun-xsuilWCaAeBf-s3zkCtCN4CRI4OQlI13PHiOOwAH9lcG9XlrfEpWfjfanEZiZKaLT0Zf6"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-surface px-margin-mobile"><div class="flex flex-col w-full pb-6 space-y-space-md">
+<!-- BARRA DE ANUNCIO FLOTANTE / TOP BANNER -->
+<aside aria-label="Aviso promocional" class="w-full bg-gradient-to-r from-primary via-primary-container to-primary text-on-primary rounded-xl px-space-sm py-2 shadow-sm flex items-center justify-between gap-space-xs overflow-hidden">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="inline-flex items-center justify-center w-2 h-2 rounded-full bg-on-tertiary-container animate-ping flex-shrink-0"></span>
+<p class="font-label-sm text-label-sm font-semibold truncate tracking-tight text-on-primary">
+        🔥 Oferta Flash: Envíos Express y Despacho Hoy
+      </p>
+</div>
+<a aria-label="Contactar soporte por WhatsApp" class="flex-shrink-0 inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-container text-on-tertiary font-label-sm text-label-sm font-bold shadow-sm active:scale-95 transition-transform" href="https://wa.me/51999999999?text=Hola,%20quiero%20soporte%20inmediato">
+<span class="material-symbols-outlined text-[15px]">chat</span>
+<span>WhatsApp</span>
+</a>
+</aside>
+<!-- BLOQUE 1: PROMO_HERO (ALTO IMPACTO Y CONVERSIÓN) -->
+<section class="relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm overflow-hidden flex flex-col gap-space-md">
+<!-- Glow de fondo decorativo -->
+<div class="absolute -right-12 -top-12 w-44 h-44 rounded-full bg-primary-fixed/40 blur-2xl pointer-events-none"></div>
+<div class="absolute -left-12 bottom-0 w-36 h-36 rounded-full bg-tertiary-fixed/30 blur-2xl pointer-events-none"></div>
+<header class="relative z-10 flex flex-col items-start gap-space-xs">
+<!-- Trust Pill -->
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-label-sm text-label-sm font-bold tracking-tight text-on-surface">Garantía 100% · Verificado Perú</span>
+</div>
+<!-- Main Headline -->
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface tracking-tight mt-1">
+        Multiplica tus Ventas y Conquista las Redes con <span class="text-primary font-extrabold">SocialLaunch Pro</span>
+</h1>
+<!-- Persuasive Subtitle -->
+<p class="font-body-md text-body-md text-on-surface-variant">
+        La infraestructura de tráfico y embudo ultra-rápido diseñada para convertir cada visita de TikTok e Instagram en transferencias y pedidos confirmados en minutos.
+      </p>
+</header>
+<!-- Visual Cockpit / Telemetría Card -->
+<article aria-label="Rendimiento en vivo" class="relative z-10 w-full bg-inverse-surface rounded-xl p-space-md text-inverse-on-surface shadow-md overflow-hidden">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-fixed animate-pulse"></span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-outline-variant font-bold">Rendimiento en Vivo</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-variant/20 text-on-primary-container font-medium">+340% ROAS Promedio</span>
+</div>
+<!-- Micro KPI Grid -->
+<div class="grid grid-cols-2 gap-2 mb-3">
+<div class="bg-surface-variant/10 rounded-lg p-2.5 flex flex-col">
+<span class="font-label-sm text-label-sm text-outline-variant">Clics Calificados</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-primary flex items-center gap-1">
+            12.4k <span class="material-symbols-outlined text-[16px] text-tertiary-fixed">trending_up</span>
+</span>
+</div>
+<div class="bg-surface-variant/10 rounded-lg p-2.5 flex flex-col">
+<span class="font-label-sm text-label-sm text-outline-variant">Conversión WhatsApp</span>
+<span class="font-headline-sm text-headline-sm font-bold text-tertiary-fixed flex items-center gap-1">
+            28.6% <span class="material-symbols-outlined text-[16px]">bolt</span>
+</span>
+</div>
+</div>
+<!-- Imagen Representativa del Embudo -->
+<div class="relative w-full h-36 rounded-lg overflow-hidden bg-surface-variant/20">
+<img class="w-full h-full object-cover" data-alt="High converting mobile e-commerce analytics dashboard mockup displayed on a modern smartphone screen, vibrant emerald green graphs, bright blue interface, commercial success in clean minimal lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeAMjjV5sIrRF5adiIi0WThgnP3kg-bYdNLUJv_wpXiJyVabZyBUp6i0tBiNd_MhwzwXO9XOjmfDH2eVdyecL5lBE7a7E2E0bjNhzlI_R_3OiynaqWhAWAJtd25jVDpgFi8RlgKyB7riNDDbGlO026TmKr9ZNJtl1BpWcVc2aOTsgUGqU-39vCl7bON5PYcCeF5haN2v3NWMEQyAM_LBNxqZAOqymxYnnD-Mv0hR-ZQVgU84Qa0v5l"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-transparent to-transparent flex items-end p-2.5">
+<p class="font-label-sm text-label-sm text-inverse-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary-fixed">insights</span>
+            Embudos validados con más de S/ 450,000 en facturación
+          </p>
+</div>
+</div>
+</article>
+<!-- CTA Primario Esmeralda de Alta Conversión -->
+<div class="relative z-10 flex flex-col gap-2 pt-1">
+<a class="w-full py-3.5 px-space-md rounded-xl bg-tertiary text-on-tertiary font-headline-sm text-headline-sm font-bold flex flex-col items-center justify-center text-center shadow-lg shadow-tertiary/25 hover:brightness-105 active:scale-[0.98] transition-all" href="https://wa.me/51999999999?text=Hola!%20Quiero%20reclamar%20mi%2050%25%20de%20descuento%20con%20el%20cupón%20PROMO2025">
+<span class="flex items-center justify-center gap-2">
+          Reclamar 50% Dcto. por WhatsApp
+          <span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container tracking-wider font-extrabold uppercase mt-0.5">
+          ⚡ Cupón Exclusivo: PROMO2025
+        </span>
+</a>
+<!-- Micro Social Proof -->
+<div class="flex items-center justify-center gap-2 pt-1">
+<div class="flex -space-x-2 overflow-hidden">
+<img class="inline-block h-6 w-6 rounded-full ring-2 ring-surface-container-lowest object-cover" data-alt="Smiling Peruvian tech entrepreneur in smart casual shirt looking at camera, soft studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtjO26T9ttx2bWtrsaEJx6SazOfeiyt-zJtNQPgH7t-zPTNQZUgzHzP6WKXolMMZ70XsT55KXQA1M4szwWCdZWvKYJ7fpm0LD8yV48V6Hm7cu5GEo2SMxt1r1ngSmSr2cGKP4znEGCngUMwtM4JMO_pBsGp2Yl0LP88c-n-5c40R8f6XvZZYGhw_yuoZhiM-1UOm9c0VkgF0LQrzZtUFSFy5EInI4rs7Cdt2iQSOMXLqa98xaV-clC"/>
+<img class="inline-block h-6 w-6 rounded-full ring-2 ring-surface-container-lowest object-cover" data-alt="Young female marketing agency founder holding laptop in modern bright office, smiling with confidence" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlIzaJQ4YdTe03uiyySQh5apDyX8M-ZLEwgXw4oPf53PimHjZDkGzN4Ok4u8Qe5YTJltiK5vo_ZEVrgO6wlxsKpLjKZHezqQR5Zjgr90UP4uPw7HE14ZfOUSQZDW7NMbAVcvV5oUWOY2DnqUgvpSxh8i71k_qVbap-AB7V9kCLPMMadIBT3RkJC87nbLbMay2qP2ilo86K7s3kbgfl0q74yABpW4pVOpw0wJkzeDL8Nmr5XQC2FN0d"/>
+<img class="inline-block h-6 w-6 rounded-full ring-2 ring-surface-container-lowest object-cover" data-alt="E-commerce store owner checking orders on tablet in organized fulfillment warehouse" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPRixBqlg34ytgug4PTIQEBXhHKal2e7gymssqHQsJRT5fFDfkOfAChs0QI9UEk4iBblZIXvjocMpmvYUPkYRujOdQTqOaUxvhjYcTWdmIAd_dI9_Hxh6m3BUbW5et-f_yXAvLgdtErNkWH-F_A5kEw_00N-ysywkTH_hQhKslerssnQXmFL-YncmvwPCO0C-sK0I9ZKma1I8NYrGCokcvgk1qvi-Cwi5gQDA2Fr4Ndu37NuAyCCKW"/>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant font-medium">
+<strong class="text-on-surface font-bold">+4,820 emprendedores</strong> activaron su link este mes
+        </p>
+</div>
+</div>
+</section>
+<!-- BLOQUE 2: SOCIAL_GRID (OFERTAS Y PRODUCTOS DESTACADOS) -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold tracking-tight">
+          Paquetes de Escalamiento
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Soluciones llave en mano para vender en piloto automático</p>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-fixed font-bold">
+        Precios Perú
+      </span>
+</div>
+<!-- TARJETA 1: PACK VIRAL STARTER -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div>
+<span class="inline-block px-2 py-0.5 rounded-full bg-error-container text-error font-label-sm text-label-sm font-extrabold uppercase">
+            Ahorras 50%
+          </span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">Pack Viral Starter</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Para tiendas y creadores lanzando su primera campaña masiva.</p>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm line-through text-outline block">S/ 299</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-extrabold text-primary">S/ 149</span>
+</div>
+</div>
+<!-- Feature List -->
+<ul class="flex flex-col gap-2 py-1">
+<li class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span>1 Link-in-Bio de alta velocidad ultra optimizado</span>
+</li>
+<li class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span>Botón de checkout directo hacia WhatsApp con mensaje dinámico</span>
+</li>
+<li class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span>Píxel Meta &amp; TikTok Ads preconfigurado sin código</span>
+</li>
+<li class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span>Soporte técnico por chat y hosting ultrarrápido incluido</span>
+</li>
+</ul>
+<button class="w-full py-3 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 hover:bg-primary hover:text-on-primary active:scale-[0.98] transition-colors shadow-sm" type="button">
+<span>Adquirir Pack Starter</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</article>
+<!-- TARJETA 2: ECOSYSTEM SCALE MASTER (MÁS VENDIDO) -->
+<article class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-space-sm relative overflow-hidden">
+<!-- Glow superior distintivo -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-primary-container to-tertiary"></div>
+<div class="flex items-start justify-between">
+<div>
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm font-extrabold uppercase">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span>
+            Más Vendido
+          </span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-1">Ecosystem Scale Master</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Para marcas consolidadas buscando dominar pauta y viralidad.</p>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm line-through text-outline block">S/ 690</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-extrabold text-primary">S/ 389</span>
+</div>
+</div>
+<!-- Feature List VIP -->
+<ul class="flex flex-col gap-2 py-1">
+<li class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm font-medium">
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+<span>Todo lo de Starter + 5 Vitrinas de Producto dinámicas</span>
+</li>
+<li class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+<span>Enrutador inteligente a múltiples asesores de ventas WhatsApp</span>
+</li>
+<li class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+<span>Integración de Catálogo PDF interactivo con stock real</span>
+</li>
+<li class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+<span>Plantillas de video ads virales para TikTok y Reels</span>
+</li>
+</ul>
+<button class="w-full py-3.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-md shadow-primary/20 hover:brightness-110 active:scale-[0.98] transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">auto_awesome</span>
+<span>Adquirir Licencia Scale Master</span>
+</button>
+</article>
+</section>
+<!-- BLOQUE 3: LINK_TREE_HUB (CONSOLA DE ENLACES BIO ENTERPRISE) -->
+<section class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm">
+<div class="text-center flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary mb-1">
+<span class="material-symbols-outlined text-[26px]">hub</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Canales y Accesos Directos</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">
+        Conéctate al instante con todas nuestras unidades operativas.
+      </p>
+</div>
+<!-- Hub Buttons -->
+<div class="flex flex-col gap-2.5">
+<!-- Link 1 -->
+<a class="w-full bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex items-center justify-between hover:bg-surface-container-high transition-colors active:scale-[0.99] group" href="#">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-error-container/40 text-error flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">play_circle</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate">TikTok Live Shop &amp; Tips Diarios</span>
+<span class="px-1.5 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm font-extrabold uppercase">Nuevo</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Lives diarios 8:00 PM con promociones sorpresa</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors text-[20px]">chevron_right</span>
+</a>
+<!-- Link 2 -->
+<a class="w-full bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex items-center justify-between hover:bg-surface-container-high transition-colors active:scale-[0.99] group" href="#">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">photo_camera</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate">Instagram @sociallaunch_pe</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">+38k seguidores · Casos de éxito y sorteos</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors text-[20px]">chevron_right</span>
+</a>
+<!-- Link 3 -->
+<a class="w-full bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex items-center justify-between hover:bg-surface-container-high transition-colors active:scale-[0.99] group" href="#">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">download_for_offline</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate">Catálogo Mayorista PDF Actualizado</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Descarga directa · Listas de precio por volumen</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors text-[20px]">file_download</span>
+</a>
+<!-- Link 4 -->
+<a class="w-full bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex items-center justify-between hover:bg-surface-container-high transition-colors active:scale-[0.99] group" href="#">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">support_agent</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate">Chat Directo Asesoría Comercial 1-a-1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Atención en menos de 3 minutos vía WhatsApp</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors text-[20px]">chevron_right</span>
+</a>
+<!-- Link 5 -->
+<a class="w-full bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex items-center justify-between hover:bg-surface-container-high transition-colors active:scale-[0.99] group" href="#">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest text-on-surface flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">location_on</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate">Ubicación Showroom &amp; Almacén Waze/Maps</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Av. Javier Prado Este, San Isidro, Lima</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors text-[20px]">map</span>
+</a>
+</div>
+</section>
+<!-- BLOQUE 4: TRUST_SOCIAL_PROOF (TESTIMONIOS REALES Y PEDIDOS) -->
+<section class="flex flex-col gap-space-sm">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-extrabold text-on-surface">4.9 / 5</span>
+<div class="flex items-center text-amber-500 gap-0.5">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">+1,450 Valoraciones</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-bold">Clientes 100% Verificados</span>
+</div>
+</div>
+<!-- Testimonial 1: Estilo Chat WhatsApp -->
+<article class="bg-surface-container-low rounded-xl p-3 flex flex-col gap-2">
+<header class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img class="w-8 h-8 rounded-full object-cover" data-alt="Portrait of a young Peruvian man smiling wearing a navy polo shirt outdoors in Lima" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlWJezShydp7TBOyAG6Z04vz_UPHcdIeMxifEaYiJbl58wnVm3FMlvSYOUB-LmYc2yhB4t8iy56P6QJCEyOCpJtVmXTpz8CRSSG1DY76LSbRnf3YN-0rmmnauPzZKPWkk5jXy-cHCxkyuikorhh2hRMEak7cINRSKEHc6AsbRZEGqCvAifEwGcps-16Rd316upwuwGKAf-hDiN5Vi8sqkznFZwCxhRRMNk3bCvcEpr3pVqcQHld1xR"/>
+<div>
+<p class="font-label-md text-label-md font-bold text-on-surface">Rodrigo Mendoza · Joyería Lima</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Compra Verificada</span>
+</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Ayer, 18:42</span>
+</header>
+<div class="bg-surface-container-lowest p-2.5 rounded-lg text-on-surface font-body-sm text-body-sm shadow-sm">
+          "Hermano, implementamos la vitrina el viernes y entre sábado y domingo cerramos 84 pedidos por WhatsApp directamente desde TikTok Ads. El retorno superó 4x lo invertido."
+        </div>
+<!-- Foto de Pedidos Listos -->
+<div class="relative rounded-lg overflow-hidden h-28 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Neatly stacked branded packages ready for courier dispatch in a warehouse distribution facility with shipping labels visible in high quality lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG9ozpLvq1RXfQkYaDRWuMcDj9Q6RvHoulYlfiGiUVAZCrKJb88CkN4edB7NC2KuP5GN1m3S-a9-5fwuatJLrwmH3-peTHNg678bfighHjh3skCgnerNujrFGzaTy11EJOncewGDFadttZ21Sz9KvtkUoS2eEk_KW6lyQbpRIwFI7V6TelruV60lpx3smdjgNBzJW0dy5lRzWBjp6lBUVE6M-os40BtG5F_g_7Iw9qWYDtzRGlDv0Y"/>
+<span class="absolute bottom-2 left-2 px-2 py-0.5 bg-inverse-surface/80 text-inverse-on-surface rounded text-[10px] font-bold">
+            📦 84 Paquetes Olva Courier enviados
+          </span>
+</div>
+</article>
+<!-- Testimonial 2: Opinión de Marca Femenina -->
+<article class="bg-surface-container-low rounded-xl p-3 flex flex-col gap-2">
+<header class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img class="w-8 h-8 rounded-full object-cover" data-alt="Portrait of a Peruvian female boutique owner with styled hair wearing light blazer in modern store" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOULWTgrf0wy6AFVUlE0iJa4eNZoh0W4I8WzZlAzwPVPqbhH6eld3A8T-bGGAwqXoQ5OeYyPowW9XNfXbl9S8NgC_8xhvMXqjqcEBrQ5Ak88DZut9_VKBPPAXmkb6b7ZMNHuZmWHxei4wNwDubRV6L6_wPubeWht9aOAm9YWJxlPoSNaddTHczrSUwVias4RR4PsAIDQy_w8Xf8pKIppaqEfu0r2u6Sf0gWLFXewdb_YK-OqO3-BwI"/>
+<div>
+<p class="font-label-md text-label-md font-bold text-on-surface">Valeria Castro · Glow Studio</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Scale Master Usuario</span>
+</div>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Hace 2 días</span>
+</header>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+          "El enrutador a 3 vendedoras nos salvó el cuello. Antes se perdían clientes por no responder a tiempo, ahora todo llega ordenado y etiquetado con el cupón."
+        </p>
+</article>
+</div>
+</section>
+<!-- BLOQUE 5: COUNTDOWN_URGENCY (TEMPORIZADOR REGRESIVO) -->
+<section class="bg-inverse-surface text-inverse-on-surface rounded-xl p-space-md shadow-lg flex flex-col items-center text-center gap-space-sm relative overflow-hidden">
+<div class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-error/20 blur-xl"></div>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-extrabold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+<span>Cierre de Promoción Mensual</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm font-bold text-inverse-on-surface">
+        El descuento del 50% expira en:
+      </h3>
+<p class="font-body-sm text-body-sm text-outline-variant">
+        Solo quedan 6 accesos promocionales asignados a este lote.
+      </p>
+</div>
+<!-- Countdown Display -->
+<div class="flex items-center justify-center gap-2 my-1" id="promo-countdown">
+<!-- Horas -->
+<div class="flex flex-col items-center">
+<span class="w-14 h-12 rounded-lg bg-surface-variant/20 flex items-center justify-center font-headline-lg-mobile text-headline-lg-mobile font-extrabold text-on-primary font-mono" id="cd-hours">04</span>
+<span class="font-label-sm text-label-sm text-outline-variant mt-1">Horas</span>
+</div>
+<span class="text-headline-sm font-bold text-outline-variant -mt-4">:</span>
+<!-- Minutos -->
+<div class="flex flex-col items-center">
+<span class="w-14 h-12 rounded-lg bg-surface-variant/20 flex items-center justify-center font-headline-lg-mobile text-headline-lg-mobile font-extrabold text-on-primary font-mono" id="cd-minutes">32</span>
+<span class="font-label-sm text-label-sm text-outline-variant mt-1">Min</span>
+</div>
+<span class="text-headline-sm font-bold text-outline-variant -mt-4">:</span>
+<!-- Segundos -->
+<div class="flex flex-col items-center">
+<span class="w-14 h-12 rounded-lg bg-surface-variant/20 flex items-center justify-center font-headline-lg-mobile text-headline-lg-mobile font-extrabold text-error font-mono animate-pulse" id="cd-seconds">18</span>
+<span class="font-label-sm text-label-sm text-outline-variant mt-1">Seg</span>
+</div>
+</div>
+<!-- Botón Secundario de Urgencia -->
+<a class="w-full py-3.5 px-space-md rounded-xl bg-tertiary text-on-tertiary font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-2 shadow-md hover:brightness-105 active:scale-[0.98] transition-transform" href="https://wa.me/51999999999?text=Hola,%20quiero%20reservar%20mi%20stock%20con%2050%25%20antes%20que%20cierre">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+<span>¡No te quedes sin cupo! Reservar Ahora</span>
+</a>
+</section>
+<!-- FOOTER INSTITUCIONAL / LEGALES -->
+<footer class="pt-space-md border-t-0 flex flex-col gap-space-sm text-center">
+<!-- Redes Sociales Mini -->
+<div class="flex items-center justify-center gap-4 text-on-surface-variant">
+<a aria-label="TikTok" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">videocam</span>
+</a>
+<a aria-label="Instagram" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+</a>
+<a aria-label="Soporte WhatsApp" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</a>
+<a aria-label="Correo de Contacto" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</a>
+</div>
+<!-- Enlaces Legales -->
+<div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-on-surface-variant font-label-sm text-label-sm">
+<a class="hover:underline" href="#">Políticas de Privacidad</a>
+<span>·</span>
+<a class="hover:underline" href="#">Términos del Servicio</a>
+<span>·</span>
+<a class="inline-flex items-center gap-1 hover:underline text-on-surface font-semibold" href="#">
+<span class="material-symbols-outlined text-[14px] text-tertiary">menu_book</span>
+        Libro de Reclamaciones
+      </a>
+</div>
+<!-- Copyright -->
+<div class="flex flex-col items-center gap-0.5 text-outline font-body-sm text-body-sm">
+<p>© 2025 SocialLaunch Technologies Corp. Todos los derechos reservados.</p>
+<p class="text-[11px]">Plataforma de infraestructura publicitaria y conversión mobile para e-commerce.</p>
+</div>
+</footer>
+</div>
+<!-- SCRIPT LOCAL PARA EL TEMPORIZADOR INTERACTIVO -->
+<script>
+  (function initCountdown() {
+    let totalSeconds = 4 * 3600 + 32 * 60 + 18;
+    const hoursEl = document.getElementById('cd-hours');
+    const minutesEl = document.getElementById('cd-minutes');
+    const secondsEl = document.getElementById('cd-seconds');
+
+    if (!hoursEl || !minutesEl || !secondsEl) return;
+
+    const timer = setInterval(() => {
+      if (totalSeconds <= 0) {
+        clearInterval(timer);
+        return;
+      }
+      totalSeconds--;
+
+      const h = Math.floor(totalSeconds / 3600);
+      const m = Math.floor((totalSeconds % 3600) / 60);
+      const s = totalSeconds % 60;
+
+      hoursEl.textContent = String(h).padStart(2, '0');
+      minutesEl.textContent = String(m).padStart(2, '0');
+      secondsEl.textContent = String(s).padStart(2, '0');
+    }, 1000);
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-gutter-mobile"><a class="flex flex-col items-center justify-center min-w-[64px] h-11 py-1 gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="vitrina-publica" href="#"><span class="material-symbols-outlined text-[22px]">storefront</span><span class="font-label-sm text-label-sm leading-none">Vitrina</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-11 py-1 gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="constructor" href="#"><span class="material-symbols-outlined text-[22px]">dashboard_customize</span><span class="font-label-sm text-label-sm leading-none">Constructor</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-11 py-1 gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="look-and-feel" href="#"><span class="material-symbols-outlined text-[22px]">palette</span><span class="font-label-sm text-label-sm leading-none">Look &amp; Feel</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-11 py-1 gap-0.5 text-on-surface-variant transition-colors hover:text-on-surface" data-path="backoffice" href="#"><span class="material-symbols-outlined text-[22px]">analytics</span><span class="font-label-sm text-label-sm leading-none">Backoffice</span></a></div></nav></body></html>

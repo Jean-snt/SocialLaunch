@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#004ac6", "on-primary-container": "#eeefff", "tertiary-fixed": "#6ffbbe", "on-surface-variant": "#434655", "on-secondary": "#ffffff", "inverse-on-surface": "#eff1f3", "surface-container": "#eceef0", "tertiary": "#006242", "on-error-container": "#93000a", "on-tertiary-container": "#bdffdb", "tertiary-container": "#007d55", "secondary-container": "#dae2fd", "surface": "#f7f9fb", "outline-variant": "#c3c6d7", "surface-dim": "#d8dadc", "secondary": "#565e74", "primary-fixed-dim": "#b4c5ff", "surface-container-low": "#f2f4f6", "error": "#ba1a1a", "surface-container-highest": "#e0e3e5", "primary-fixed": "#dbe1ff", "on-surface": "#191c1e", "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#005236", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#3f465c", "inverse-surface": "#2d3133", "on-error": "#ffffff", "on-primary": "#ffffff", "on-primary-fixed": "#00174b", "primary-container": "#2563eb", "surface-variant": "#e0e3e5", "on-tertiary-fixed": "#002113", "surface-container-lowest": "#ffffff", "secondary-fixed": "#dae2fd", "outline": "#737686", "on-secondary-fixed": "#131b2e", "on-secondary-container": "#5c647a", "inverse-primary": "#b4c5ff", "background": "#f7f9fb", "surface-bright": "#f7f9fb", "on-primary-fixed-variant": "#003ea8", "on-background": "#191c1e", "secondary-fixed-dim": "#bec6e0", "tertiary-fixed-dim": "#4edea3", "surface-container-high": "#e6e8ea", "surface-tint": "#0053db" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter": "1.5rem", "space-xl": "2.5rem", "gutter-mobile": "0.75rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "margin": "2rem", "space-md": "1rem" }, "fontFamily": { "label-lg": [ "Inter" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-md": [ "Inter" ], "body-lg": [ "Inter" ], "label-md": [ "Inter" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ], "body-sm": [ "Inter" ], "label-sm": [ "Inter" ], "headline-xl": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ] }, "fontSize": { "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-lg": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-md": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-xl-mobile": [ "30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" } ], "headline-xl": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "800" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-gutter flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container shadow-sm"><span class="material-symbols-outlined text-[20px]">rocket_launch</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">SocialLaunch</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Studio CMS</span></div></div><div class="px-gutter my-space-sm"><div class="bg-surface-container rounded-lg px-space-sm py-space-xs flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Workspace</span><span class="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-tertiary-container font-bold"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span>Pro Enterprise</span></div></div><nav class="flex flex-col gap-space-xs px-space-sm mt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><div class="px-space-sm py-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Plataforma</span></div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm" data-path="constructor-cms" href="#"><span class="material-symbols-outlined text-[20px]">layers</span><span>Constructor CMS</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="look-and-feel-generator" href="#"><span class="material-symbols-outlined text-[20px]">palette</span><span>Look &amp; Feel Generator</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="media-library" href="#"><span class="material-symbols-outlined text-[20px]">perm_media</span><span>Media Library</span></a><div class="px-space-sm pt-space-md pb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Canales de Venta</span></div><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="vitrina-publica-preview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">storefront</span><span>Vitrina Pública</span></div><span class="font-label-sm text-label-sm bg-tertiary-container text-on-tertiary px-space-xs py-0.5 rounded">Live</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="campaign-telemetry" href="#"><span class="material-symbols-outlined text-[20px]">query_stats</span><span>Campaign Telemetry</span></a></nav></div><div class="p-space-sm border-t border-transparent"><div class="bg-surface-container rounded-lg p-space-sm flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-label-md text-label-md font-semibold text-on-surface">Alejandra Silva</span><span class="font-label-sm text-label-sm text-on-surface-variant">Admin</span></div></div><button class="p-space-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" type="button"><span class="material-symbols-outlined text-[18px]">more_vert</span></button></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="inline-flex items-center gap-space-xs bg-tertiary-container/10 px-space-sm py-1 rounded-full"><span class="w-2 h-2 rounded-full bg-tertiary-container animate-ping"></span><span class="w-2 h-2 rounded-full bg-tertiary-container -ml-3"></span><span class="font-label-sm text-label-sm text-tertiary-container font-bold tracking-wide">⚡ EN VIVO / LIVE</span></div><div class="relative flex items-center w-80"><span class="material-symbols-outlined absolute left-space-sm text-on-surface-variant text-[18px]">search</span><input class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm pl-9 pr-14 py-space-xs rounded-lg shadow-none outline-none focus:ring-2 focus:ring-primary-container transition-all" placeholder="Buscar campañas, módulos o assets..." type="text"/><span class="absolute right-space-sm font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-1.5 py-0.5 rounded font-mono">⌘K</span></div></div><div class="flex items-center gap-space-md"><a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all shadow-none" data-path="vitrina-publica-preview" href="#"><span class="material-symbols-outlined text-[16px] text-tertiary-container">visibility</span><span>Ver Vitrina Pública</span><span class="material-symbols-outlined text-[16px]">arrow_outward</span></a><button class="relative p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><button class="p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="flex items-center gap-space-sm pl-space-sm border-l border-transparent"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Alejandra Silva</span><span class="font-label-sm text-label-sm text-tertiary-container font-medium">Super Admin</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Dynamic Builder Workspace -->
+<div class="px-gutter pt-space-lg pb-space-xl flex flex-col gap-space-lg max-w-[1720px] mx-auto w-full">
+<!-- Top Command Strip / Builder Sub-Header -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">design_services</span>
+</div>
+<div>
+<div class="flex items-center gap-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">Constructor CMS</span>
+<span class="font-label-sm text-label-sm uppercase px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">v2.4 JSONB</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+              Auto-sync persistente activo en tiempo real
+            </p>
+</div>
+</div>
+<!-- Campaign Selector Tabs -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-xl">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest font-label-md text-label-md text-primary shadow-sm flex items-center gap-space-xs transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">link</span>
+<span>Página Principal (/bio)</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface flex items-center gap-space-xs transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>CyberDays (/promo-2025)</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg font-label-md text-label-md text-on-surface-variant hover:text-on-surface flex items-center gap-space-xs transition-all" type="button">
+<span class="material-symbols-outlined text-[16px]">local_fire_department</span>
+<span>Black Friday (/black-friday)</span>
+</button>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-sm">
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">tune</span>
+<span>SEO &amp; Meta Tags</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+<span>Previsualizar</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-lg py-2 rounded-lg bg-tertiary-container hover:bg-tertiary text-on-tertiary font-label-lg text-label-lg shadow-md transition-all group" type="button">
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:scale-110">rocket_launch</span>
+<span>Publicar Cambios 🚀</span>
+</button>
+</div>
+</section>
+<!-- Split View: Editor & Live Canvas Simulator -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Blocks Manager & Live Form Inspector (5 Cols) -->
+<div class="xl:col-span-5 flex flex-col gap-space-md">
+<!-- Add Block Quick Tray -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-headline-sm text-headline-sm text-on-surface">Estructura Modular</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">5 Bloques Cargados</span>
+</div>
+<!-- Quick Block Palette -->
+<div class="grid grid-cols-5 gap-space-xs mb-space-md">
+<button class="flex flex-col items-center justify-center p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors group" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary group-hover:scale-110 transition-transform">star</span>
+<span class="font-label-sm text-label-sm text-on-surface mt-1 truncate">promo_hero</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors group" type="button">
+<span class="material-symbols-outlined text-[20px] text-error group-hover:scale-110 transition-transform">timer</span>
+<span class="font-label-sm text-label-sm text-on-surface mt-1 truncate">countdown</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors group" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary group-hover:scale-110 transition-transform">grid_view</span>
+<span class="font-label-sm text-label-sm text-on-surface mt-1 truncate">social_grid</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors group" type="button">
+<span class="material-symbols-outlined text-[20px] text-primary-container group-hover:scale-110 transition-transform">format_list_bulleted</span>
+<span class="font-label-sm text-label-sm text-on-surface mt-1 truncate">link_tree</span>
+</button>
+<button class="flex flex-col items-center justify-center p-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container-high transition-colors group" type="button">
+<span class="material-symbols-outlined text-[20px] text-tertiary group-hover:scale-110 transition-transform">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface mt-1 truncate">proof</span>
+</button>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-space-xs hover:bg-primary-container transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>+ Insertar Nuevo Bloque Modular</span>
+</button>
+</div>
+<!-- Draggable Blocks Accordion Stack -->
+<div class="flex flex-col gap-space-sm" id="blocks-accordion-root">
+<!-- Block #1: promo_hero (Expanded) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="p-space-md bg-surface-container-low flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-outline cursor-grab">drag_indicator</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-primary text-on-primary font-mono">#1</span>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">Hero Promocional Directo</span>
+<span class="font-label-sm text-label-sm text-primary font-mono">promo_hero_01</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<!-- Vis switch -->
+<div class="relative inline-flex items-center cursor-pointer">
+<div class="w-8 h-4 bg-tertiary-container rounded-full transition-colors"></div>
+<div class="w-3 h-3 bg-on-tertiary rounded-full absolute right-0.5 shadow-sm"></div>
+</div>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_upward</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</button>
+<button class="p-1 text-error hover:bg-error-container rounded" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Block 1 Form Fields -->
+<div class="p-space-md flex flex-col gap-space-md bg-surface-container-lowest">
+<div class="grid grid-cols-2 gap-space-md">
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Badge Flotante Superior</label>
+<input class="w-full bg-surface-container-low px-space-sm py-2 rounded-lg font-body-sm text-body-sm text-on-surface outline-none focus:bg-surface-container-lowest transition-all" type="text" value="🔥 EDICIÓN LIMITADA 2025"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Icono Principal</label>
+<div class="flex items-center gap-space-xs bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">bolt</span>
+<input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface outline-none" type="text" value="bolt"/>
+</div>
+</div>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Titular H1 (Impacto Principal)</label>
+<input class="w-full bg-surface-container-low px-space-sm py-2 rounded-lg font-body-sm text-body-sm text-on-surface font-semibold outline-none focus:bg-surface-container-lowest transition-all" type="text" value="Acelera tus Ventas con SocialLaunch Studio"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Subtítulo Descriptivo</label>
+<textarea class="w-full bg-surface-container-low p-space-sm rounded-lg font-body-sm text-body-sm text-on-surface outline-none focus:bg-surface-container-lowest transition-all resize-none" rows="2">Landing pages optimizadas al 100% para tráfico de Instagram &amp; TikTok con redirección directa a WhatsApp.</textarea>
+</div>
+<div class="grid grid-cols-2 gap-space-md">
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Texto Botón WhatsApp CTA</label>
+<input class="w-full bg-surface-container-low px-space-sm py-2 rounded-lg font-body-sm text-body-sm text-on-surface outline-none focus:bg-surface-container-lowest transition-all" type="text" value="Pedir Asesoría Directa"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">URL / Enlace Destino WhatsApp</label>
+<input class="w-full bg-surface-container-low px-space-sm py-2 rounded-lg font-body-sm text-body-sm text-on-surface outline-none focus:bg-surface-container-lowest transition-all truncate" type="text" value="https://wa.me/5491123456789?text=QuieroInfo"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Block #2: countdown_urgency (Expanded) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="p-space-md bg-surface-container-low flex items-center justify-between cursor-pointer">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-outline cursor-grab">drag_indicator</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-secondary text-on-secondary font-mono">#2</span>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">Contador de Urgencia Regresivo</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">countdown_urgency_02</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="relative inline-flex items-center cursor-pointer">
+<div class="w-8 h-4 bg-tertiary-container rounded-full transition-colors"></div>
+<div class="w-3 h-3 bg-on-tertiary rounded-full absolute right-0.5 shadow-sm"></div>
+</div>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_upward</span>
+</button>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</button>
+<button class="p-1 text-error hover:bg-error-container rounded" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Block 2 Form Fields -->
+<div class="p-space-md flex flex-col gap-space-md bg-surface-container-lowest">
+<div class="grid grid-cols-2 gap-space-md">
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Fecha Límite Campaña</label>
+<input class="w-full bg-surface-container-low px-space-sm py-2 rounded-lg font-body-sm text-body-sm text-on-surface outline-none" type="date" value="2025-11-28"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Porcentaje Descuento</label>
+<div class="flex items-center bg-surface-container-low rounded-lg px-space-sm py-1.5">
+<span class="font-label-md text-label-md text-error mr-1">-</span>
+<input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface outline-none" type="number" value="45"/>
+<span class="font-label-md text-label-md text-on-surface-variant">%</span>
+</div>
+</div>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Mensaje de Urgencia en Canvas</label>
+<input class="w-full bg-surface-container-low px-space-sm py-2 rounded-lg font-body-sm text-body-sm text-on-surface outline-none" type="text" value="¡Quedan solo 7 cupos con precio bonificado de preventa!"/>
+</div>
+</div>
+</div>
+<!-- Block #3: social_grid (Collapsed) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-outline cursor-grab">drag_indicator</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono">#3</span>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">Rejilla de Catálogo Visual (Instagram Feed)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">social_grid_03 • 6 Items Activos</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="relative inline-flex items-center cursor-pointer">
+<div class="w-8 h-4 bg-tertiary-container rounded-full"></div>
+<div class="w-3 h-3 bg-on-tertiary rounded-full absolute right-0.5 shadow-sm"></div>
+</div>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Block #4: link_tree (Collapsed) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-outline cursor-grab">drag_indicator</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono">#4</span>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">Lista de Enlaces Prioritarios (Biolinks)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">link_tree_04 • 4 Enlaces</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="relative inline-flex items-center cursor-pointer">
+<div class="w-8 h-4 bg-tertiary-container rounded-full"></div>
+<div class="w-3 h-3 bg-on-tertiary rounded-full absolute right-0.5 shadow-sm"></div>
+</div>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Block #5: proof (Collapsed) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-outline cursor-grab">drag_indicator</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-mono">#5</span>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">Insignias de Prueba Social y Testimonios</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">proof_badges_05 • 3 Reseñas</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="relative inline-flex items-center cursor-pointer">
+<div class="w-8 h-4 bg-tertiary-container rounded-full"></div>
+<div class="w-3 h-3 bg-on-tertiary rounded-full absolute right-0.5 shadow-sm"></div>
+</div>
+<button class="p-1 text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Live Canvas & Preview Simulator (7 Cols) -->
+<div class="xl:col-span-7 flex flex-col gap-space-sm bg-surface-container-low p-space-md rounded-2xl shadow-inner min-h-[860px]">
+<!-- Viewport Simulator Controls Bar -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant ml-2">Simulador:</span>
+<div class="flex items-center bg-surface-container-low rounded-lg p-0.5">
+<button class="p-1.5 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">desktop_windows</span>
+</button>
+<button class="p-1.5 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[18px]">tablet_mac</span>
+</button>
+<button class="p-1.5 rounded-md bg-surface-container-lowest text-primary shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">smartphone</span>
+</button>
+</div>
+<span class="font-label-sm text-label-sm font-mono text-outline ml-2">390 x 844 px (iPhone 15 Pro)</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center bg-surface-container-low px-2 py-1 rounded-lg text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] mr-1">zoom_in</span>
+<span>100% Fit</span>
+</div>
+<button class="p-1 text-on-surface-variant hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- Phone Frame Live Canvas Simulator -->
+<div class="flex justify-center items-center py-4 flex-1">
+<!-- Smartphone Outer Shell -->
+<div class="w-[380px] bg-inverse-surface rounded-[44px] p-3 shadow-2xl relative">
+<!-- Dynamic Island / Speaker Notch -->
+<div class="absolute top-5 left-1/2 -translate-x-1/2 w-28 h-5 bg-black rounded-full z-30 flex items-center justify-end pr-2">
+<span class="w-2.5 h-2.5 rounded-full bg-slate-900 border border-slate-700"></span>
+</div>
+<!-- Screen Surface Interior (Link-in-Bio Canvas) -->
+<div class="bg-surface rounded-[34px] overflow-hidden flex flex-col relative w-full h-[740px] overflow-y-auto">
+<!-- Simulated Header Profile -->
+<div class="pt-10 pb-4 px-4 bg-gradient-to-b from-primary-fixed/60 to-transparent flex flex-col items-center text-center">
+<div class="relative mb-2">
+<div class="w-20 h-20 rounded-full overflow-hidden shadow-md">
+<img class="w-full h-full object-cover" data-alt="Modern professional Latin tech agency founder smiling confidently, captured in a clean minimalist architectural office with warm natural lighting and vibrant blue accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwDimvaFJVeEgaVs16o60NTZ686xNmJTHTUDcHdUBp4CLxD8_O0vFtN9NL5Mi_3Jrcj1Adb-0OdmCLCKntYOTS5gdOFLm4ndGRvy1u94_IFYyvzDdeDE9H1XApURE1P8pkYZQ-7FE82Edbo0ebmG-YR8pI9DK5FFaWmAHpd5Hb0vRlnUYw9Hg4RM-hlqU5lZIpuqmkPIZ6ELKUiUv2Cp4u10Dk5jl2bT-p6ZUdeYc3ngLUu-dlYUHw"/>
+</div>
+<div class="absolute bottom-0 right-0 w-6 h-6 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center text-[12px] shadow">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight">SocialLaunch Studio</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">@sociallaunch.app • Marketing Accelerator</p>
+<!-- Live Tag -->
+<div class="mt-2 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>🔥 EDICIÓN LIMITADA 2025</span>
+</div>
+</div>
+<!-- Canvas Module 1: promo_hero live rendering -->
+<div class="px-4 py-2 flex flex-col items-center text-center">
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-extrabold leading-snug">
+                  Acelera tus Ventas con SocialLaunch Studio
+                </h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5">
+                  Landing pages optimizadas al 100% para tráfico de Instagram &amp; TikTok con redirección directa a WhatsApp.
+                </p>
+<!-- High Conversion WhatsApp Button -->
+<a class="mt-3 w-full py-3 px-4 rounded-xl bg-tertiary-container text-on-tertiary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-lg hover:brightness-105 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Pedir Asesoría Directa</span>
+</a>
+</div>
+<!-- Canvas Module 2: countdown_urgency live rendering -->
+<div class="mx-4 my-3 p-3.5 rounded-xl bg-surface-container-highest shadow-sm">
+<div class="flex items-center justify-between text-error font-label-md text-label-md mb-2">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">alarm</span>
+<span>OFERTA TERMINA EN:</span>
+</div>
+<span class="bg-error text-on-error font-label-sm text-label-sm px-2 py-0.5 rounded font-bold">-45% OFF</span>
+</div>
+<!-- Digits Grid -->
+<div class="grid grid-cols-4 gap-1.5 text-center">
+<div class="bg-surface-container-lowest p-1.5 rounded-lg">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface block font-mono">02</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">DÍAS</span>
+</div>
+<div class="bg-surface-container-lowest p-1.5 rounded-lg">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface block font-mono">14</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">HORAS</span>
+</div>
+<div class="bg-surface-container-lowest p-1.5 rounded-lg">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface block font-mono">36</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">MINS</span>
+</div>
+<div class="bg-surface-container-lowest p-1.5 rounded-lg">
+<span class="font-headline-sm text-headline-sm font-bold text-error block font-mono">19</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SEGS</span>
+</div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-center mt-2 font-medium">
+                  ¡Quedan solo 7 cupos con precio bonificado de preventa!
+                </p>
+</div>
+<!-- Canvas Module 3: social_grid Visual Feed Simulation -->
+<div class="px-4 py-2">
+<span class="font-label-md text-label-md text-on-surface-variant mb-2 block uppercase tracking-wider">Productos Destacados</span>
+<div class="grid grid-cols-2 gap-2">
+<div class="rounded-xl overflow-hidden bg-surface-container shadow-sm group">
+<img class="w-full h-24 object-cover" data-alt="High tech digital marketing launch dashboard analytics screen floating over stylish creative desktop setup with vibrant blue neon accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQ9ph98C9uc8t_HMcSbM79orNWPr1Q9OlsgOUxJEtVaxdDreyIlMd9SB-6ECa-K0R77L8ck00H6jCIMsjzJ_V9bAFT90ZyMdQ_FZnXJpkvucamvjYBXZp0Iprt4MPCtywvXdKK0JZlaF_uYLRMOzhePxhUoEkgDvrYwXGPPHo8SU2thXtfaoNkDeRkI3g3cr9z6EzqE3txO2ePdskaqegE4U5F1ij6YdsPI-vreWXV6GE7zV4mK---"/>
+<div class="p-2 bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface block truncate">Pack Emprendedor 2025</span>
+<span class="font-label-sm text-label-sm text-primary font-bold block">$49 USD</span>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden bg-surface-container shadow-sm group">
+<img class="w-full h-24 object-cover" data-alt="Minimalist smartphone mockups showing high converting ecommerce store interface with bright emerald green conversion triggers and modern typography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCZDPl09IuMggTjodRdi9ZkWfpj5raoflyGYC3OQe-GOTmDnVjDEvEx5HNhLA3EgoKABdF-XCX2CKPZKPrpglqDCDsMkX6vjeOVZBYxl1wDBB21RmaeQlPHlGCqYQAiKlZM0o9zXfOG3omr9pZRsfYVLNX_jHltM6Vj4qsPBlJAn_3dYeiT0cql7QUqtRgPuYJzv-TsGEADBQMZlgl1NWSc1XGDTshvDYQ-oFENN0e9DxUYD489jt2"/>
+<div class="p-2 bg-surface-container-lowest">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface block truncate">Funnel TikTok Ads Pro</span>
+<span class="font-label-sm text-label-sm text-primary font-bold block">$89 USD</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Canvas Module 4: link_tree Action Links -->
+<div class="px-4 py-2 flex flex-col gap-2">
+<a class="w-full py-2.5 px-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high transition-colors shadow-sm flex items-center justify-between text-on-surface" href="#">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">download</span>
+<span class="font-label-md text-label-md">Descargar Guía Gratis de Funnels</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+</a>
+<a class="w-full py-2.5 px-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high transition-colors shadow-sm flex items-center justify-between text-on-surface" href="#">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">support_agent</span>
+<span class="font-label-md text-label-md">Agendar Llamada Estratégica 1:1</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+</a>
+</div>
+<!-- Simulated Footer -->
+<div class="mt-auto py-4 text-center">
+<p class="font-label-sm text-label-sm text-outline">Powered by SocialLaunch Studio CMS</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Section: Enterprise Page & Slug Directory (Data Table) -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md">
+<!-- Table Header & Controls -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Gestor Central de Páginas &amp; Slugs</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Monitorea rendimiento comercial, visibilidad y slugs registrados en tu dominio.</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Search input -->
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-sm text-outline text-[18px]">search</span>
+<input class="bg-surface-container-low pl-9 pr-3 py-1.5 rounded-lg font-body-sm text-body-sm text-on-surface outline-none focus:bg-surface-container transition-all w-64" placeholder="Filtrar por slug o campaña..." type="text"/>
+</div>
+<button class="inline-flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>+ Nueva Landing Page</span>
+</button>
+</div>
+</div>
+<!-- Enterprise Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider rounded-lg">
+<th class="py-space-sm px-space-md rounded-l-lg">Ruta / Slug</th>
+<th class="py-space-sm px-space-md">Título de Campaña</th>
+<th class="py-space-sm px-space-md">Estado</th>
+<th class="py-space-sm px-space-md">Visitas Totales</th>
+<th class="py-space-sm px-space-md">Tasa de Conversión</th>
+<th class="py-space-sm px-space-md text-right rounded-r-lg">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y-0">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs font-mono font-label-md text-label-md text-primary">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">public</span>
+<span>/promo-2025</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Campaña CyberDays Pro</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lanzamiento anual ofertas flash</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-tertiary-container text-on-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary animate-pulse"></span>
+                  Publicado
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs font-headline-sm text-headline-sm text-on-surface">
+<span>42,850</span>
+<span class="text-tertiary-container font-label-sm text-label-sm flex items-center">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>+18%
+                  </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-lg text-label-lg font-bold text-tertiary-container">8.4%</span>
+<div class="w-24 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full" style="width: 68%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="p-1.5 text-primary hover:bg-primary/10 rounded-lg transition-colors" title="Editar" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors" title="Duplicar" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors" title="Métricas" type="button">
+<span class="material-symbols-outlined text-[18px]">insights</span>
+</button>
+<button class="p-1.5 text-error hover:bg-error-container rounded-lg transition-colors" title="Eliminar" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs font-mono font-label-md text-label-md text-primary">
+<span class="material-symbols-outlined text-[16px] text-tertiary-container">public</span>
+<span>/bio</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Página Principal Link-in-Bio</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hub corporativo perfiles sociales</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-tertiary-container text-on-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary animate-pulse"></span>
+                  Publicado
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs font-headline-sm text-headline-sm text-on-surface">
+<span>128,490</span>
+<span class="text-tertiary-container font-label-sm text-label-sm flex items-center">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>+34%
+                  </span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-lg text-label-lg font-bold text-tertiary-container">12.1%</span>
+<div class="w-24 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full" style="width: 88%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="p-1.5 text-primary hover:bg-primary/10 rounded-lg transition-colors" title="Editar" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors" title="Duplicar" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors" title="Métricas" type="button">
+<span class="material-symbols-outlined text-[18px]">insights</span>
+</button>
+<button class="p-1.5 text-error hover:bg-error-container rounded-lg transition-colors" title="Eliminar" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs font-mono font-label-md text-label-md text-secondary">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+<span>/black-friday</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Especial Black Friday VIP</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lista de espera y descuentos cerrados</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  Borrador
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-headline-sm text-headline-sm text-outline">0</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-lg text-label-lg text-outline">0.0%</span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="p-1.5 text-primary hover:bg-primary/10 rounded-lg transition-colors" title="Editar" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors" title="Duplicar" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors" title="Métricas" type="button">
+<span class="material-symbols-outlined text-[18px]">insights</span>
+</button>
+<button class="p-1.5 text-error hover:bg-error-container rounded-lg transition-colors" title="Eliminar" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs font-mono font-label-md text-label-md text-secondary">
+<span class="material-symbols-outlined text-[16px] text-outline">pause_circle</span>
+<span>/catalogo</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-label-lg text-label-lg text-on-surface">Catálogo Temporal Primavera</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Colección anterior fuera de temporada</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  Pausado
+                </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-xs font-headline-sm text-headline-sm text-on-surface">
+<span>14,120</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-lg text-label-lg font-bold text-on-surface-variant">3.9%</span>
+<div class="w-24 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-outline rounded-full" style="width: 32%;"></div>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-space-xs">
+<button class="p-1.5 text-primary hover:bg-primary/10 rounded-lg transition-colors" title="Editar" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors" title="Duplicar" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:bg-surface-container rounded-lg transition-colors" title="Métricas" type="button">
+<span class="material-symbols-outlined text-[18px]">insights</span>
+</button>
+<button class="p-1.5 text-error hover:bg-error-container rounded-lg transition-colors" title="Eliminar" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination / Footer Info -->
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span>Mostrando 4 de 12 landings registradas</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm" type="button">Anterior</button>
+<button class="px-space-sm py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm" type="button">1</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm" type="button">2</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm" type="button">Siguiente</button>
+</div>
+</div>
+</section>
+</div>
+</div></main></div></body></html>

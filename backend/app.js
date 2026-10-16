@@ -1,150 +1,68 @@
+require("dotenv").config();
 const express = require("express");
-const supabase = require("./supabaseClient");
+const cors = require("cors");
+const cookieParser = require("cookie-parser");
+const path = require("path");
+
+const apiRoutes = require("./src/routes");
+const errorHandler = require("./src/middlewares/error.middleware");
+
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
+// Configuración de CORS para permitir cookies httpOnly entre Frontend y Backend
+const allowedOrigins = [
+  process.env.CLIENT_URL || "http://localhost:3001",
+  "http://localhost:3000",
+  "http://127.0.0.1:3000",
+  "http://127.0.0.1:3001",
+];
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      // Permitir peticiones sin origen (como Postman o curl) o que estén en la lista
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+      return callback(null, true); // En desarrollo permitir orígenes
+    },
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"],
+  })
+);
+
+// Middlewares estándar de parsing
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 
+// Servir la carpeta de imágenes procesadas WebP de forma estática
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
+// Ruta raíz informativa
 app.get("/", (req, res) => {
-  res.json({ mensaje: "¡Hola! El servidor está funcionando correctamente" });
+  res.json({
+    nombre: "SocialLaunch CMS API",
+    estado: "Activo",
+    version: "2.4.0",
+    docs: "/api/health",
+  });
 });
 
-app.get("/test-db", async (req, res) => {
-  try {
-    const { data, error } = await supabase.from("pages").select("*");
+// Montar todas las rutas de la API bajo el prefijo /api
+app.use("/api", apiRoutes);
 
-    if (error) {
-      return res.status(400).json({
-        conexion: "Falló",
-        error: error.message,
-      });
-    }
-    res.json({
-      conexion: "¡Exitoso",
-      datosDePrueba: data,
-    });
-  } catch (err) {
-    res.status(500).json({
-      conexion: "Error de servidor",
-      error: err.message,
-    });
-  }
-});
+// Middleware centralizado de errores
+app.use(errorHandler);
 
-app.post("/create-user", async (req, res) => {
-  try {
-    const { name, email, password_hash, role_id } = req.body;
+// Iniciar servidor
+if (process.env.NODE_ENV !== "test") {
+  app.listen(PORT, () => {
+    console.log(`🚀 Servidor SocialLaunch corriendo en http://localhost:${PORT}`);
+    console.log(`📡 Rutas API disponibles en http://localhost:${PORT}/api`);
+  });
+}
 
-    if (!name || !email || !password_hash || !role_id) {
-      return res.status(400).json({
-        error:
-          "Faltan campos obligatorios: name, email, password_hash y role_id",
-      });
-    }
-
-    const { data, error } = await supabase
-      .from("users")
-      .insert([
-        {
-          name: name,
-          email: email,
-          password_hash: password_hash,
-          role_id: role_id,
-        },
-      ])
-      .select();
-
-    if (error) {
-      return res.status(400).json({
-        mensaje: "Hubo un error al insertar el dato",
-        error: error.message,
-      });
-    }
-
-    res.status(201).json({
-      mensaje: "¡Dato insertado con éxito!",
-      usuarioCreado: data,
-    });
-  } catch (err) {
-    res.status(500).json({
-      mensaje: "Error interno del servidor",
-      error: err.message,
-    });
-  }
-});
-
-app.put("/edit-user/:id", async (req, res) => {
-  try {
-    const { id } = req.params;
-    const { name, email, password_hash, role_id } = req.body;
-
-    const { data, error } = await supabase
-      .from("users")
-      .update([
-        {
-          name: name,
-          email: email,
-          password_hash: password_hash,
-          role_id: role_id,
-        },
-      ])
-      .eq("id", id)
-      .select();
-
-    if (error) {
-      return res.status(400).json({
-        mensaje: "Hubo un error al actualizar el dato",
-        error: error.message,
-      });
-    }
-
-    res.status(201).json({
-      mensaje: "¡Dato actualizado con éxito!",
-      usuarioCreado: data,
-    });
-  } catch (err) {
-    res.status(500).json({
-      mensaje: "Error interno del servidor",
-      error: err.message,
-    });
-  }
-});
-
-app.delete("/delete-user/:id", async (req, res) => {
-  try {
-    const { id } = req.params;
-
-    const { data, error } = await supabase
-      .from("users")
-      .delete()
-      .eq("id", id)
-      .select();
-
-    if (error) {
-      return res.status(400).json({
-        mensaje: "Hubo un error al eliminar el registro",
-        error: error.message,
-      });
-    }
-
-    if (!data || data.length === 0) {
-      return res.status(404).json({
-        mensaje: "No se encontró ningún usuario con ese ID",
-      });
-    }
-
-    res.json({
-      mensaje: "¡Registro eliminado con éxito!",
-      usuarioEliminado: data,
-    });
-  } catch (err) {
-    res.status(500).json({
-      mensaje: "Error interno del servidor",
-      error: err.message,
-    });
-  }
-});
-
-app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
-});
+module.exports = app;

@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#004ac6", "on-primary-container": "#eeefff", "tertiary-fixed": "#6ffbbe", "on-surface-variant": "#434655", "on-secondary": "#ffffff", "inverse-on-surface": "#eff1f3", "surface-container": "#eceef0", "tertiary": "#006242", "on-error-container": "#93000a", "on-tertiary-container": "#bdffdb", "tertiary-container": "#007d55", "secondary-container": "#dae2fd", "surface": "#f7f9fb", "outline-variant": "#c3c6d7", "surface-dim": "#d8dadc", "secondary": "#565e74", "primary-fixed-dim": "#b4c5ff", "surface-container-low": "#f2f4f6", "error": "#ba1a1a", "surface-container-highest": "#e0e3e5", "primary-fixed": "#dbe1ff", "on-surface": "#191c1e", "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#005236", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#3f465c", "inverse-surface": "#2d3133", "on-error": "#ffffff", "on-primary": "#ffffff", "on-primary-fixed": "#00174b", "primary-container": "#2563eb", "surface-variant": "#e0e3e5", "on-tertiary-fixed": "#002113", "surface-container-lowest": "#ffffff", "secondary-fixed": "#dae2fd", "outline": "#737686", "on-secondary-fixed": "#131b2e", "on-secondary-container": "#5c647a", "inverse-primary": "#b4c5ff", "background": "#f7f9fb", "surface-bright": "#f7f9fb", "on-primary-fixed-variant": "#003ea8", "on-background": "#191c1e", "secondary-fixed-dim": "#bec6e0", "tertiary-fixed-dim": "#4edea3", "surface-container-high": "#e6e8ea", "surface-tint": "#0053db" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter": "1.5rem", "space-xl": "2.5rem", "gutter-mobile": "0.75rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "margin": "2rem", "space-md": "1rem" }, "fontFamily": { "label-lg": [ "Inter" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-md": [ "Inter" ], "body-lg": [ "Inter" ], "label-md": [ "Inter" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ], "body-sm": [ "Inter" ], "label-sm": [ "Inter" ], "headline-xl": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ] }, "fontSize": { "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-lg": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-md": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-xl-mobile": [ "30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" } ], "headline-xl": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "800" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-gutter flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container shadow-sm"><span class="material-symbols-outlined text-[20px]">rocket_launch</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">SocialLaunch</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Studio CMS</span></div></div><div class="px-gutter my-space-sm"><div class="bg-surface-container rounded-lg px-space-sm py-space-xs flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Workspace</span><span class="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-tertiary-container font-bold"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span>Pro Enterprise</span></div></div><nav class="flex flex-col gap-space-xs px-space-sm mt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><div class="px-space-sm py-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Plataforma</span></div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="constructor-cms" href="#"><span class="material-symbols-outlined text-[20px]">layers</span><span>Constructor CMS</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm" data-path="look-and-feel-generator" href="#"><span class="material-symbols-outlined text-[20px]">palette</span><span>Look &amp; Feel Generator</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="media-library" href="#"><span class="material-symbols-outlined text-[20px]">perm_media</span><span>Media Library</span></a><div class="px-space-sm pt-space-md pb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Canales de Venta</span></div><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="vitrina-publica-preview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">storefront</span><span>Vitrina Pública</span></div><span class="font-label-sm text-label-sm bg-tertiary-container text-on-tertiary px-space-xs py-0.5 rounded">Live</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="campaign-telemetry" href="#"><span class="material-symbols-outlined text-[20px]">query_stats</span><span>Campaign Telemetry</span></a></nav></div><div class="p-space-sm border-t border-transparent"><div class="bg-surface-container rounded-lg p-space-sm flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-label-md text-label-md font-semibold text-on-surface">Alejandra Silva</span><span class="font-label-sm text-label-sm text-on-surface-variant">Admin</span></div></div><button class="p-space-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" type="button"><span class="material-symbols-outlined text-[18px]">more_vert</span></button></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="inline-flex items-center gap-space-xs bg-tertiary-container/10 px-space-sm py-1 rounded-full"><span class="w-2 h-2 rounded-full bg-tertiary-container animate-ping"></span><span class="w-2 h-2 rounded-full bg-tertiary-container -ml-3"></span><span class="font-label-sm text-label-sm text-tertiary-container font-bold tracking-wide">⚡ EN VIVO / LIVE</span></div><div class="relative flex items-center w-80"><span class="material-symbols-outlined absolute left-space-sm text-on-surface-variant text-[18px]">search</span><input class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm pl-9 pr-14 py-space-xs rounded-lg shadow-none outline-none focus:ring-2 focus:ring-primary-container transition-all" placeholder="Buscar campañas, módulos o assets..." type="text"/><span class="absolute right-space-sm font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-1.5 py-0.5 rounded font-mono">⌘K</span></div></div><div class="flex items-center gap-space-md"><a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all shadow-none" data-path="vitrina-publica-preview" href="#"><span class="material-symbols-outlined text-[16px] text-tertiary-container">visibility</span><span>Ver Vitrina Pública</span><span class="material-symbols-outlined text-[16px]">arrow_outward</span></a><button class="relative p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><button class="p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="flex items-center gap-space-sm pl-space-sm border-l border-transparent"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Alejandra Silva</span><span class="font-label-sm text-label-sm text-tertiary-container font-medium">Super Admin</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-margin py-space-lg flex flex-col gap-space-lg">
+<!-- Header de Módulo -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-3xl">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center justify-center w-7 h-7 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-[18px]">palette</span>
+</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Design Engine • Runtime CSS v3.4</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">Personalización Visual &amp; Brand Identity</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Controla el tema mediante CSS Variables globales en tiempo real con inyección instantánea al runtime de Next.js.</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm self-start lg:self-auto">
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors shadow-sm" id="btnResetDefaults" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>Restablecer</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors shadow-sm" id="btnExportModal" type="button">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span>Exportar Tokens</span>
+</button>
+<button class="inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-primary hover:bg-primary/90 text-on-primary font-label-md text-label-md transition-all shadow-md active:scale-95" id="btnSaveGlobal" type="button">
+<span class="material-symbols-outlined text-[18px]">cloud_sync</span>
+<span>Guardar Tema Global</span>
+</button>
+</div>
+</section>
+<!-- Canvas Principal en 3 Columnas Desktop -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- COLUMNA 1: Controles de Color y Tipografía (4 Cols) -->
+<section class="xl:col-span-4 flex flex-col gap-space-lg">
+<!-- Presets 1-Clic -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">auto_fix_high</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Paletas en 1-Clic</h2>
+</div>
+<span class="font-label-sm text-label-sm bg-tertiary-container/15 text-tertiary font-bold px-space-xs py-0.5 rounded">Recomendadas</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="preset-btn group p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-left transition-all relative overflow-hidden shadow-sm" data-preset="cyber" type="button">
+<div class="flex items-center gap-1.5 mb-space-xs">
+<span class="w-3.5 h-3.5 rounded-full bg-[#2563EB] shadow-xs"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-[#0F172A] shadow-xs"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-[#10B981] shadow-xs"></span>
+</div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">Cyber Blue</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Default SaaS</div>
+</button>
+<button class="preset-btn group p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-left transition-all relative overflow-hidden shadow-sm" data-preset="emerald" type="button">
+<div class="flex items-center gap-1.5 mb-space-xs">
+<span class="w-3.5 h-3.5 rounded-full bg-[#006242] shadow-xs"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-[#131b2e] shadow-xs"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-[#25D366] shadow-xs"></span>
+</div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">Emerald Sale</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">WhatsApp Focus</div>
+</button>
+<button class="preset-btn group p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-left transition-all relative overflow-hidden shadow-sm" data-preset="darkneon" type="button">
+<div class="flex items-center gap-1.5 mb-space-xs">
+<span class="w-3.5 h-3.5 rounded-full bg-[#7C3AED] shadow-xs"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-[#090D16] shadow-xs"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-[#F43F5E] shadow-xs"></span>
+</div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">Dark Neon VIP</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Luxury Drops</div>
+</button>
+<button class="preset-btn group p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-left transition-all relative overflow-hidden shadow-sm" data-preset="sunset" type="button">
+<div class="flex items-center gap-1.5 mb-space-xs">
+<span class="w-3.5 h-3.5 rounded-full bg-[#EA580C] shadow-xs"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-[#18181B] shadow-xs"></span>
+<span class="w-3.5 h-3.5 rounded-full bg-[#FACC15] shadow-xs"></span>
+</div>
+<div class="font-label-md text-label-md text-on-surface font-semibold">Sunset Punch</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">Urgencia Flash</div>
+</button>
+</div>
+</div>
+<!-- Editor Detallado de Variables CSS -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">colorize</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Editor de Variables :root</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">5 keys sync</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Color Primario -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Primario (--primary-color)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Brand CTA • 100%</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="relative w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 shadow-xs">
+<input class="absolute -top-2 -left-2 w-16 h-16 cursor-pointer opacity-0" id="inputPrimaryColor" type="color" value="#2563EB"/>
+<div class="w-full h-full bg-[#2563EB]" id="swatchPrimary"></div>
+</div>
+<input class="w-32 bg-surface-container-lowest font-mono text-body-sm text-on-surface px-space-sm py-space-xs rounded uppercase font-semibold" id="textPrimaryHex" type="text" value="#2563EB"/>
+<div class="flex-1 flex flex-col gap-0.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant flex justify-between"><span>Intensidad</span><span class="font-mono" id="sliderPrimaryVal">100%</span></span>
+<input class="w-full accent-primary h-1.5 bg-surface-container rounded-lg cursor-pointer" id="sliderPrimary" max="100" min="30" type="range" value="100"/>
+</div>
+</div>
+</div>
+<!-- Color Secundario -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Secundario (--secondary-color)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Headings &amp; Overlays</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="relative w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 shadow-xs">
+<input class="absolute -top-2 -left-2 w-16 h-16 cursor-pointer opacity-0" id="inputSecondaryColor" type="color" value="#0F172A"/>
+<div class="w-full h-full bg-[#0F172A]" id="swatchSecondary"></div>
+</div>
+<input class="w-32 bg-surface-container-lowest font-mono text-body-sm text-on-surface px-space-sm py-space-xs rounded uppercase font-semibold" id="textSecondaryHex" type="text" value="#0F172A"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tono base de contraste alto</span>
+</div>
+</div>
+<!-- Acento Conversión -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Acento High-Sale (--accent-color)</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold bg-tertiary-container/15 px-space-xs py-0.5 rounded">WhatsApp Direct</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="relative w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 shadow-xs">
+<input class="absolute -top-2 -left-2 w-16 h-16 cursor-pointer opacity-0" id="inputAccentColor" type="color" value="#10B981"/>
+<div class="w-full h-full bg-[#10B981]" id="swatchAccent"></div>
+</div>
+<input class="w-32 bg-surface-container-lowest font-mono text-body-sm text-on-surface px-space-sm py-space-xs rounded uppercase font-semibold" id="textAccentHex" type="text" value="#10B981"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Gatillo comercial • +28% CTR</span>
+</div>
+</div>
+<!-- Fondo de Superficie -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Superficie Base (--bg-surface)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Canvas Vitrina</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="relative w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 shadow-xs">
+<input class="absolute -top-2 -left-2 w-16 h-16 cursor-pointer opacity-0" id="inputBgSurfaceColor" type="color" value="#F8FAFC"/>
+<div class="w-full h-full bg-[#F8FAFC]" id="swatchBgSurface"></div>
+</div>
+<input class="w-32 bg-surface-container-lowest font-mono text-body-sm text-on-surface px-space-sm py-space-xs rounded uppercase font-semibold" id="textBgSurfaceHex" type="text" value="#F8FAFC"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Background UI pública</span>
+</div>
+</div>
+<!-- Backoffice Dark -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Dark Cockpit (--bg-dark)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Telemetry &amp; Builder</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="relative w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 shadow-xs">
+<input class="absolute -top-2 -left-2 w-16 h-16 cursor-pointer opacity-0" id="inputBgDarkColor" type="color" value="#1E293B"/>
+<div class="w-full h-full bg-[#1E293B]" id="swatchBgDark"></div>
+</div>
+<input class="w-32 bg-surface-container-lowest font-mono text-body-sm text-on-surface px-space-sm py-space-xs rounded uppercase font-semibold" id="textBgDarkHex" type="text" value="#1E293B"/>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fondo terminal y métricas</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Tipografía y Jerarquía -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">match_case</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Tipografía Global</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Google Web Fonts</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs">
+<button class="font-select-btn p-space-sm rounded-lg bg-primary/10 text-primary font-label-md text-label-md font-bold transition-all text-center" data-font="jakarta" type="button">
+              Plus Jakarta
+            </button>
+<button class="font-select-btn p-space-sm rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-all text-center" data-font="inter" type="button">
+              Inter UI
+            </button>
+<button class="font-select-btn p-space-sm rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-all text-center" data-font="poppins" type="button">
+              Poppins Display
+            </button>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs font-preview-box">
+<div class="flex items-baseline justify-between">
+<span class="font-label-sm text-label-sm uppercase font-mono text-outline">H1 Display</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">32px / 700 bold</span>
+</div>
+<p class="preview-h1 text-on-surface font-headline-lg text-headline-lg font-bold leading-tight">Mega Oferta Flash 24H</p>
+<div class="flex items-baseline justify-between mt-space-xs">
+<span class="font-label-sm text-label-sm uppercase font-mono text-outline">H2 Section</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">22px / 600 med</span>
+</div>
+<p class="preview-h2 text-on-surface font-headline-md text-headline-md font-semibold">Productos Exclusivos en Tendencia</p>
+<div class="flex items-baseline justify-between mt-space-xs">
+<span class="font-label-sm text-label-sm uppercase font-mono text-outline">Body &amp; Microcopy</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">14px Regular</span>
+</div>
+<p class="preview-body text-on-surface-variant font-body-md text-body-md">Envío garantizado el mismo día para pedidos procesados antes de las 18:00 hrs por WhatsApp Express.</p>
+</div>
+</div>
+</section>
+<!-- COLUMNA 2: Brand Assets & Component Inspector (4 Cols) -->
+<section class="xl:col-span-4 flex flex-col gap-space-lg">
+<!-- Brand Assets Uploader -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">photo_library</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Gestor de Brand Assets</h2>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-container/15 font-bold px-space-xs py-0.5 rounded">CDN Activo</span>
+</div>
+<!-- Drag and Drop Logo -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span>Logotipo Principal</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SVG • PNG Transparente</span>
+</label>
+<div class="p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container/70 transition-all flex flex-col items-center justify-center text-center cursor-pointer group">
+<div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-space-sm group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">cloud_upload</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Arrastra tu logo aquí o busca en tu equipo</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1">Recomendado 512x128px con fondo transparente (Máx. 2MB)</span>
+<div class="mt-space-md p-space-xs px-space-md bg-surface-container-lowest rounded-lg shadow-xs flex items-center gap-space-sm">
+<div class="w-6 h-6 rounded bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[16px]">verified</span>
+</div>
+<span class="font-label-sm text-label-sm font-mono text-on-surface font-medium">brand-logo-master.svg (48 KB)</span>
+<span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Favicon Picker -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center justify-between">
+<span>Favicon &amp; App Icon</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">32x32 / 180x180 px</span>
+</label>
+<div class="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-container-low">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest shadow-sm flex items-center justify-center flex-shrink-0">
+<div class="w-8 h-8 rounded-full bg-gradient-to-tr from-primary to-accent-sample flex items-center justify-center text-on-primary font-bold text-[14px]">
+                  SL
+                </div>
+</div>
+<div class="flex flex-col flex-1">
+<span class="font-label-md text-label-md text-on-surface font-semibold">favicon-store-32.ico</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sincronizado con Apple Touch Icon</span>
+</div>
+<button class="px-space-sm py-space-xs rounded bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high transition-colors" type="button">
+                Cambiar
+              </button>
+</div>
+</div>
+</div>
+<!-- Inspector de Componentes de Marca -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">layers</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Inspector de Componentes</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Live States</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Vista previa de elementos UI con las variables activas inyectadas.</p>
+<!-- Component Showcase: Botones -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm font-mono text-outline uppercase">Botones Interactivos</span>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="px-space-md py-space-sm rounded-lg text-white font-label-md text-label-md font-semibold shadow-md flex items-center gap-space-xs transition-transform active:scale-95" id="inspectBtnPrimary" style="background-color: #2563EB;" type="button">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+<span>Comprar Ahora</span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg text-white font-label-md text-label-md font-semibold shadow-md flex items-center gap-space-xs transition-transform active:scale-95" id="inspectBtnAccent" style="background-color: #10B981;" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>WhatsApp Express</span>
+</button>
+<button class="px-space-md py-space-sm rounded-lg text-white font-label-md text-label-md font-semibold shadow-md flex items-center gap-space-xs transition-transform active:scale-95" id="inspectBtnSecondary" style="background-color: #0F172A;" type="button">
+<span class="material-symbols-outlined text-[18px]">info</span>
+<span>Detalles</span>
+</button>
+</div>
+</div>
+<!-- Component Showcase: Badges & Tags -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm font-mono text-outline uppercase">Etiquetas, Badges y Micro-KPIs</span>
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="px-space-sm py-1 rounded-full font-label-sm text-label-sm font-bold flex items-center gap-1" id="inspectBadgePrimary" style="background-color: rgba(37,99,235,0.12); color: #2563EB;">
+<span class="w-1.5 h-1.5 rounded-full" style="background-color: #2563EB;"></span>
+<span>40% OFF Flash</span>
+</span>
+<span class="px-space-sm py-1 rounded-full font-label-sm text-label-sm font-bold flex items-center gap-1" id="inspectBadgeAccent" style="background-color: rgba(16,185,129,0.15); color: #006242;">
+<span class="w-1.5 h-1.5 rounded-full" style="background-color: #10B981;"></span>
+<span>Stock en Vivo (3 unid)</span>
+</span>
+<span class="bg-surface-container text-on-surface px-space-sm py-1 rounded-full font-label-sm text-label-sm font-medium">
+                Envío Gratis
+              </span>
+</div>
+</div>
+<!-- Component Showcase: Card Preview -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm font-mono text-outline uppercase">Tarjeta Producto Vitrina</span>
+<div class="bg-surface-container-lowest rounded-lg p-space-sm shadow-sm flex items-center gap-space-sm">
+<div class="w-14 h-14 rounded-lg bg-surface-container overflow-hidden flex-shrink-0 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="High quality sleek smart tech device accessory shot in studio lighting with clean white background and blue reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5wRjpNmUYycFRc8Rht7xWcWKSMtI8LgunR_8VcMgqeB1OQViuFWWX56TlibUUmD1dRJwamhkD0PAWY_uRYeChy1qdzH92LktJOUQo2AGKLm1UgRBMsDWmLnwUYBJHKyENfB5r58ZfDRTtLmvl_qHE74d1_21zNK2_7Ar_3fTBw-Y0_e0zo2Tg8k5pLj_JpObdo8J_LpxkpDQXxpTQVdOR6R-9BU0AK3ceKSag0KQlLYPnnLNoHdwP"/>
+</div>
+<div class="flex-1 flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Smart Band Pro v4</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">$49.990 CLP</span>
+</div>
+<button class="w-8 h-8 rounded-lg text-white flex items-center justify-center shadow-xs" id="inspectMiniBtn" style="background-color: #10B981;" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- COLUMNA 3: Live CSS Mirror Simulator & Code Exporter (4 Cols) -->
+<section class="xl:col-span-4 flex flex-col gap-space-lg">
+<!-- Live CSS Mirror Frame -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">devices</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Live CSS Mirror Simulator</h2>
+</div>
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">60 FPS</span>
+</div>
+</div>
+<!-- Chrome Browser Header Simulated -->
+<div class="rounded-xl overflow-hidden shadow-md border-0 bg-surface-container-high">
+<div class="bg-surface-container-highest px-space-sm py-2 flex items-center gap-space-sm">
+<div class="flex items-center gap-1">
+<span class="w-2.5 h-2.5 rounded-full bg-[#EF4444]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#F59E0B]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#10B981]"></span>
+</div>
+<div class="flex-1 bg-surface-container-lowest rounded-md px-space-xs py-0.5 flex items-center gap-1 text-[11px] font-mono text-on-surface-variant">
+<span class="material-symbols-outlined text-[13px] text-tertiary">lock</span>
+<span class="truncate">sociallaunch.bio/tienda-oficial</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">refresh</span>
+</div>
+<!-- Mirror Canvas Screen -->
+<div class="p-space-md flex flex-col gap-space-md transition-colors duration-200" id="mirrorCanvas" style="background-color: #F8FAFC;">
+<!-- Store Brand Profile -->
+<div class="flex items-center gap-space-sm">
+<div class="w-11 h-11 rounded-full flex items-center justify-center text-white font-bold shadow-sm" id="mirrorAvatar" style="background: linear-gradient(135deg, #2563EB, #10B981);">
+                  SL
+                </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-headline-sm text-headline-sm font-bold leading-tight" id="mirrorTitle" style="color: #0F172A;">UrbanStore VIP</span>
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Link-in-bio verificado • 2.4k pedidos</span>
+</div>
+</div>
+<!-- Banner Promo Dynamic -->
+<div class="rounded-xl p-space-md text-white shadow-sm flex flex-col gap-space-xs transition-colors duration-200" id="mirrorPromoBanner" style="background-color: #2563EB;">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold opacity-80">Campaña Activa</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-white">Lanzamiento Colección Verano</h3>
+<p class="font-body-sm text-body-sm opacity-90">Descuento automático aplicado al pagar con WhatsApp checkout.</p>
+<div class="mt-space-xs self-start">
+<button class="px-space-md py-1.5 rounded-lg text-white font-label-md text-label-md font-bold shadow-sm hover:opacity-90 transition-opacity" id="mirrorCtaBtn" style="background-color: #10B981;" type="button">
+                    Reclamar Cupón
+                  </button>
+</div>
+</div>
+<!-- Featured Product Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col gap-space-sm">
+<div class="h-32 rounded-lg bg-surface-container overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Modern minimalist sneaker design product photograph on clean studio setup with sharp shadows and vivid blue neon tone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0eKXI5UnB17IxrN4toRkpwjGrLWZByqmPELvEQITyqqDtugnWQebvokWIdLTn1qpyzD2T7g8bhqJwgQgK_bJV3nrHZXvt0Qeed-7cDKg4GHDC3xSdJ7EF-BMSWOqAIiXXj4-ILOu9v1TzmfA3csj887CrRX5FtNzgzlz09fzcaDY9kmN_-mLPeq3eGXdqc-PRF7W5Lv7LW-ZmpFq97AeDh6Jw82e2btHNG7lHs3OGNbVCz8dOPtAw"/>
+<span class="absolute top-2 right-2 text-white font-label-sm text-label-sm font-bold px-2 py-0.5 rounded shadow-sm" id="mirrorSaleBadge" style="background-color: #10B981;">
+                    TOP VENTAS
+                  </span>
+</div>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-lg text-label-lg font-bold" id="mirrorProductTitle" style="color: #0F172A;">Runner Pro Hyper-Comfort</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Suela ergonómica • Garantía 1 año</span>
+</div>
+<div class="flex items-center justify-between mt-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold font-mono" id="mirrorPrice" style="color: #0F172A;">$64.990</span>
+<button class="px-space-md py-space-xs rounded-lg text-white font-label-md text-label-md font-semibold shadow-xs flex items-center gap-1" id="mirrorBuyBtn" style="background-color: #2563EB;" type="button">
+<span class="material-symbols-outlined text-[16px]">shopping_cart</span>
+<span>Comprar</span>
+</button>
+</div>
+</div>
+<!-- WhatsApp Quick Action Dock -->
+<div class="mt-space-xs">
+<button class="w-full py-space-sm px-space-md rounded-xl text-white font-label-lg text-label-lg font-bold shadow-md flex items-center justify-center gap-space-xs transition-transform active:scale-95" id="mirrorWaDock" style="background-color: #10B981;" type="button">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Hablar con un asesor por WhatsApp</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Code Exporter Dark Box (:root) -->
+<div class="rounded-xl p-space-md shadow-md flex flex-col gap-space-sm transition-colors duration-200" id="exportDarkBox" style="background-color: #1E293B;">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">code</span>
+<h2 class="font-headline-sm text-headline-sm text-white font-bold">Variables CSS (:root)</h2>
+</div>
+<button class="inline-flex items-center gap-1 px-space-sm py-1 rounded bg-slate-700/80 hover:bg-slate-700 text-tertiary-fixed font-label-sm text-label-sm font-mono transition-colors" id="btnCopyCss" type="button">
+<span class="material-symbols-outlined text-[14px]" id="copyIcon">content_copy</span>
+<span id="copyText">Copiar CSS</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-slate-400">Pega este bloque en <span class="font-mono text-slate-300">app/globals.css</span> de tu proyecto Next.js.</p>
+<pre class="bg-[#090D16] p-space-sm rounded-lg overflow-x-auto text-body-sm font-mono text-slate-200 leading-relaxed shadow-inner"><code id="codeBlock">:root {
+  /* SocialLaunch Design Engine Tokens */
+  --primary-color: <span class="text-blue-400" id="codePrimary">#2563EB</span>;
+  --secondary-color: <span class="text-slate-300" id="codeSecondary">#0F172A</span>;
+  --accent-color: <span class="text-emerald-400" id="codeAccent">#10B981</span>;
+  --bg-surface: <span class="text-amber-300" id="codeBgSurface">#F8FAFC</span>;
+  --bg-dark: <span class="text-indigo-300" id="codeBgDark">#1E293B</span>;
+  --font-brand: <span class="text-teal-300" id="codeFont">'Plus Jakarta Sans', sans-serif</span>;
+}</code></pre>
+<div class="flex items-center justify-between text-slate-400 font-label-sm text-label-sm pt-space-xs">
+<span class="flex items-center gap-1 text-tertiary-fixed">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+              Next.js 14 App Router Ready
+            </span>
+<span class="font-mono">Payload: ~280B</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Notification Toast Microinteraction -->
+<div class="fixed bottom-6 right-6 transform translate-y-24 opacity-0 transition-all duration-300 z-50 bg-inverse-surface text-inverse-on-surface px-space-md py-space-sm rounded-xl shadow-xl flex items-center gap-space-sm pointer-events-none" id="saveToast">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">cloud_done</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold">¡Tema Global Actualizado!</span>
+<span class="font-label-sm text-label-sm text-slate-300">Las variables CSS se inyectaron al runtime exitosamente.</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initLookAndFeelGenerator() {
+    // State
+    const state = {
+      primary: '#2563EB',
+      secondary: '#0F172A',
+      accent: '#10B981',
+      bgSurface: '#F8FAFC',
+      bgDark: '#1E293B',
+      font: 'Plus Jakarta Sans',
+      fontKey: 'jakarta'
+    };
+
+    const presets = {
+      cyber: {
+        primary: '#2563EB',
+        secondary: '#0F172A',
+        accent: '#10B981',
+        bgSurface: '#F8FAFC',
+        bgDark: '#1E293B',
+        font: 'Plus Jakarta Sans',
+        fontKey: 'jakarta'
+      },
+      emerald: {
+        primary: '#006242',
+        secondary: '#131b2e',
+        accent: '#25D366',
+        bgSurface: '#F2F9F5',
+        bgDark: '#0D2319',
+        font: 'Inter',
+        fontKey: 'inter'
+      },
+      darkneon: {
+        primary: '#7C3AED',
+        secondary: '#090D16',
+        accent: '#F43F5E',
+        bgSurface: '#F8F7FF',
+        bgDark: '#110E1B',
+        font: 'Poppins',
+        fontKey: 'poppins'
+      },
+      sunset: {
+        primary: '#EA580C',
+        secondary: '#18181B',
+        accent: '#FACC15',
+        bgSurface: '#FFFBF5',
+        bgDark: '#1C1510',
+        font: 'Plus Jakarta Sans',
+        fontKey: 'jakarta'
+      }
+    };
+
+    // DOM Elements - Inputs
+    const inputPrimaryColor = document.getElementById('inputPrimaryColor');
+    const textPrimaryHex = document.getElementById('textPrimaryHex');
+    const swatchPrimary = document.getElementById('swatchPrimary');
+    const sliderPrimary = document.getElementById('sliderPrimary');
+    const sliderPrimaryVal = document.getElementById('sliderPrimaryVal');
+
+    const inputSecondaryColor = document.getElementById('inputSecondaryColor');
+    const textSecondaryHex = document.getElementById('textSecondaryHex');
+    const swatchSecondary = document.getElementById('swatchSecondary');
+
+    const inputAccentColor = document.getElementById('inputAccentColor');
+    const textAccentHex = document.getElementById('textAccentHex');
+    const swatchAccent = document.getElementById('swatchAccent');
+
+    const inputBgSurfaceColor = document.getElementById('inputBgSurfaceColor');
+    const textBgSurfaceHex = document.getElementById('textBgSurfaceHex');
+    const swatchBgSurface = document.getElementById('swatchBgSurface');
+
+    const inputBgDarkColor = document.getElementById('inputBgDarkColor');
+    const textBgDarkHex = document.getElementById('textBgDarkHex');
+    const swatchBgDark = document.getElementById('swatchBgDark');
+
+    // DOM Elements - Live Inspector
+    const inspectBtnPrimary = document.getElementById('inspectBtnPrimary');
+    const inspectBtnAccent = document.getElementById('inspectBtnAccent');
+    const inspectBtnSecondary = document.getElementById('inspectBtnSecondary');
+    const inspectBadgePrimary = document.getElementById('inspectBadgePrimary');
+    const inspectBadgeAccent = document.getElementById('inspectBadgeAccent');
+    const inspectMiniBtn = document.getElementById('inspectMiniBtn');
+
+    // DOM Elements - Simulator
+    const mirrorCanvas = document.getElementById('mirrorCanvas');
+    const mirrorPromoBanner = document.getElementById('mirrorPromoBanner');
+    const mirrorCtaBtn = document.getElementById('mirrorCtaBtn');
+    const mirrorSaleBadge = document.getElementById('mirrorSaleBadge');
+    const mirrorBuyBtn = document.getElementById('mirrorBuyBtn');
+    const mirrorWaDock = document.getElementById('mirrorWaDock');
+    const mirrorTitle = document.getElementById('mirrorTitle');
+    const mirrorProductTitle = document.getElementById('mirrorProductTitle');
+    const mirrorPrice = document.getElementById('mirrorPrice');
+    const mirrorAvatar = document.getElementById('mirrorAvatar');
+    const exportDarkBox = document.getElementById('exportDarkBox');
+
+    // DOM Elements - Code Exporter
+    const codePrimary = document.getElementById('codePrimary');
+    const codeSecondary = document.getElementById('codeSecondary');
+    const codeAccent = document.getElementById('codeAccent');
+    const codeBgSurface = document.getElementById('codeBgSurface');
+    const codeBgDark = document.getElementById('codeBgDark');
+    const codeFont = document.getElementById('codeFont');
+
+    // Sync Function
+    function syncTheme() {
+      // Update Inputs
+      inputPrimaryColor.value = state.primary;
+      textPrimaryHex.value = state.primary.toUpperCase();
+      swatchPrimary.style.backgroundColor = state.primary;
+
+      inputSecondaryColor.value = state.secondary;
+      textSecondaryHex.value = state.secondary.toUpperCase();
+      swatchSecondary.style.backgroundColor = state.secondary;
+
+      inputAccentColor.value = state.accent;
+      textAccentHex.value = state.accent.toUpperCase();
+      swatchAccent.style.backgroundColor = state.accent;
+
+      inputBgSurfaceColor.value = state.bgSurface;
+      textBgSurfaceHex.value = state.bgSurface.toUpperCase();
+      swatchBgSurface.style.backgroundColor = state.bgSurface;
+
+      inputBgDarkColor.value = state.bgDark;
+      textBgDarkHex.value = state.bgDark.toUpperCase();
+      swatchBgDark.style.backgroundColor = state.bgDark;
+
+      // Update Inspector
+      if (inspectBtnPrimary) inspectBtnPrimary.style.backgroundColor = state.primary;
+      if (inspectBtnAccent) inspectBtnAccent.style.backgroundColor = state.accent;
+      if (inspectBtnSecondary) inspectBtnSecondary.style.backgroundColor = state.secondary;
+      if (inspectMiniBtn) inspectMiniBtn.style.backgroundColor = state.accent;
+
+      if (inspectBadgePrimary) {
+        inspectBadgePrimary.style.backgroundColor = state.primary + '20';
+        inspectBadgePrimary.style.color = state.primary;
+        const dot = inspectBadgePrimary.querySelector('span');
+        if (dot) dot.style.backgroundColor = state.primary;
+      }
+      if (inspectBadgeAccent) {
+        inspectBadgeAccent.style.backgroundColor = state.accent + '25';
+        inspectBadgeAccent.style.color = state.accent;
+        const dot = inspectBadgeAccent.querySelector('span');
+        if (dot) dot.style.backgroundColor = state.accent;
+      }
+
+      // Update Live Mirror Simulator
+      if (mirrorCanvas) mirrorCanvas.style.backgroundColor = state.bgSurface;
+      if (mirrorPromoBanner) mirrorPromoBanner.style.backgroundColor = state.primary;
+      if (mirrorCtaBtn) mirrorCtaBtn.style.backgroundColor = state.accent;
+      if (mirrorSaleBadge) mirrorSaleBadge.style.backgroundColor = state.accent;
+      if (mirrorBuyBtn) mirrorBuyBtn.style.backgroundColor = state.primary;
+      if (mirrorWaDock) mirrorWaDock.style.backgroundColor = state.accent;
+      if (mirrorTitle) mirrorTitle.style.color = state.secondary;
+      if (mirrorProductTitle) mirrorProductTitle.style.color = state.secondary;
+      if (mirrorPrice) mirrorPrice.style.color = state.secondary;
+      if (mirrorAvatar) mirrorAvatar.style.background = `linear-gradient(135deg, ${state.primary}, ${state.accent})`;
+
+      // Dark Box export container
+      if (exportDarkBox) exportDarkBox.style.backgroundColor = state.bgDark;
+
+      // Update Code Highlighting
+      if (codePrimary) codePrimary.textContent = state.primary;
+      if (codeSecondary) codeSecondary.textContent = state.secondary;
+      if (codeAccent) codeAccent.textContent = state.accent;
+      if (codeBgSurface) codeBgSurface.textContent = state.bgSurface;
+      if (codeBgDark) codeBgDark.textContent = state.bgDark;
+      if (codeFont) codeFont.textContent = `'${state.font}', sans-serif`;
+
+      // Update Font previews
+      document.querySelectorAll('.preview-h1, .preview-h2, .preview-body').forEach(el => {
+        el.style.fontFamily = `'${state.font}', sans-serif`;
+      });
+    }
+
+    // Bind Color Inputs
+    function bindColorInput(pickerEl, textEl, stateKey) {
+      if (!pickerEl || !textEl) return;
+      pickerEl.addEventListener('input', (e) => {
+        state[stateKey] = e.target.value;
+        syncTheme();
+      });
+      textEl.addEventListener('change', (e) => {
+        let val = e.target.value.trim();
+        if (!val.startsWith('#')) val = '#' + val;
+        if (/^#[0-9A-Fa-f]{6}$/.test(val)) {
+          state[stateKey] = val;
+          syncTheme();
+        } else {
+          textEl.value = state[stateKey];
+        }
+      });
+    }
+
+    bindColorInput(inputPrimaryColor, textPrimaryHex, 'primary');
+    bindColorInput(inputSecondaryColor, textSecondaryHex, 'secondary');
+    bindColorInput(inputAccentColor, textAccentHex, 'accent');
+    bindColorInput(inputBgSurfaceColor, textBgSurfaceHex, 'bgSurface');
+    bindColorInput(inputBgDarkColor, textBgDarkHex, 'bgDark');
+
+    // Primary slider intensity simulation
+    if (sliderPrimary) {
+      sliderPrimary.addEventListener('input', (e) => {
+        const val = e.target.value;
+        if (sliderPrimaryVal) sliderPrimaryVal.textContent = val + '%';
+        if (inspectBtnPrimary) inspectBtnPrimary.style.opacity = (val / 100).toString();
+      });
+    }
+
+    // Presets Click
+    document.querySelectorAll('.preset-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const key = btn.getAttribute('data-preset');
+        if (presets[key]) {
+          Object.assign(state, presets[key]);
+          updateFontButtons(state.fontKey);
+          syncTheme();
+        }
+      });
+    });
+
+    // Font Selection
+    function updateFontButtons(selectedKey) {
+      document.querySelectorAll('.font-select-btn').forEach(b => {
+        const k = b.getAttribute('data-font');
+        if (k === selectedKey) {
+          b.className = 'font-select-btn p-space-sm rounded-lg bg-primary/10 text-primary font-label-md text-label-md font-bold transition-all text-center';
+        } else {
+          b.className = 'font-select-btn p-space-sm rounded-lg bg-surface-container-low text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-all text-center';
+        }
+      });
+    }
+
+    document.querySelectorAll('.font-select-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const k = btn.getAttribute('data-font');
+        state.fontKey = k;
+        if (k === 'jakarta') state.font = 'Plus Jakarta Sans';
+        else if (k === 'inter') state.font = 'Inter';
+        else if (k === 'poppins') state.font = 'Poppins';
+        updateFontButtons(k);
+        syncTheme();
+      });
+    });
+
+    // Copy CSS Button
+    const btnCopyCss = document.getElementById('btnCopyCss');
+    const copyText = document.getElementById('copyText');
+    const copyIcon = document.getElementById('copyIcon');
+
+    if (btnCopyCss) {
+      btnCopyCss.addEventListener('click', () => {
+        const cssContent = `:root {
+  --primary-color: ${state.primary};
+  --secondary-color: ${state.secondary};
+  --accent-color: ${state.accent};
+  --bg-surface: ${state.bgSurface};
+  --bg-dark: ${state.bgDark};
+  --font-brand: '${state.font}', sans-serif;
+}`;
+        navigator.clipboard.writeText(cssContent).then(() => {
+          if (copyText) copyText.textContent = '¡Copiado!';
+          if (copyIcon) copyIcon.textContent = 'done';
+          setTimeout(() => {
+            if (copyText) copyText.textContent = 'Copiar CSS';
+            if (copyIcon) copyIcon.textContent = 'content_copy';
+          }, 2000);
+        }).catch(() => {
+          if (copyText) copyText.textContent = 'Listo en portapapeles';
+        });
+      });
+    }
+
+    // Save Toast Interaction
+    const btnSaveGlobal = document.getElementById('btnSaveGlobal');
+    const saveToast = document.getElementById('saveToast');
+    if (btnSaveGlobal && saveToast) {
+      btnSaveGlobal.addEventListener('click', () => {
+        saveToast.classList.remove('translate-y-24', 'opacity-0');
+        saveToast.classList.add('translate-y-0', 'opacity-100');
+        setTimeout(() => {
+          saveToast.classList.remove('translate-y-0', 'opacity-100');
+          saveToast.classList.add('translate-y-24', 'opacity-0');
+        }, 3200);
+      });
+    }
+
+    // Reset Defaults
+    const btnResetDefaults = document.getElementById('btnResetDefaults');
+    if (btnResetDefaults) {
+      btnResetDefaults.addEventListener('click', () => {
+        Object.assign(state, presets.cyber);
+        updateFontButtons('jakarta');
+        if (sliderPrimary) sliderPrimary.value = 100;
+        if (sliderPrimaryVal) sliderPrimaryVal.textContent = '100%';
+        syncTheme();
+      });
+    }
+
+    // Export Tokens Button
+    const btnExportModal = document.getElementById('btnExportModal');
+    if (btnExportModal && btnCopyCss) {
+      btnExportModal.addEventListener('click', () => {
+        btnCopyCss.click();
+        const box = document.getElementById('exportDarkBox');
+        if (box) {
+          box.scrollIntoView({ behavior: 'smooth' });
+          box.classList.add('ring-2', 'ring-primary');
+          setTimeout(() => box.classList.remove('ring-2', 'ring-primary'), 1500);
+        }
+      });
+    }
+
+    // Initial run
+    syncTheme();
+  })();
+</script></main></div></body></html>

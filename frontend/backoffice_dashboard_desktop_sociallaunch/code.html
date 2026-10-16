@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#004ac6", "on-primary-container": "#eeefff", "tertiary-fixed": "#6ffbbe", "on-surface-variant": "#434655", "on-secondary": "#ffffff", "inverse-on-surface": "#eff1f3", "surface-container": "#eceef0", "tertiary": "#006242", "on-error-container": "#93000a", "on-tertiary-container": "#bdffdb", "tertiary-container": "#007d55", "secondary-container": "#dae2fd", "surface": "#f7f9fb", "outline-variant": "#c3c6d7", "surface-dim": "#d8dadc", "secondary": "#565e74", "primary-fixed-dim": "#b4c5ff", "surface-container-low": "#f2f4f6", "error": "#ba1a1a", "surface-container-highest": "#e0e3e5", "primary-fixed": "#dbe1ff", "on-surface": "#191c1e", "error-container": "#ffdad6", "on-tertiary-fixed-variant": "#005236", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#3f465c", "inverse-surface": "#2d3133", "on-error": "#ffffff", "on-primary": "#ffffff", "on-primary-fixed": "#00174b", "primary-container": "#2563eb", "surface-variant": "#e0e3e5", "on-tertiary-fixed": "#002113", "surface-container-lowest": "#ffffff", "secondary-fixed": "#dae2fd", "outline": "#737686", "on-secondary-fixed": "#131b2e", "on-secondary-container": "#5c647a", "inverse-primary": "#b4c5ff", "background": "#f7f9fb", "surface-bright": "#f7f9fb", "on-primary-fixed-variant": "#003ea8", "on-background": "#191c1e", "secondary-fixed-dim": "#bec6e0", "tertiary-fixed-dim": "#4edea3", "surface-container-high": "#e6e8ea", "surface-tint": "#0053db" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter": "1.5rem", "space-xl": "2.5rem", "gutter-mobile": "0.75rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "space-xs": "0.25rem", "margin": "2rem", "space-md": "1rem" }, "fontFamily": { "label-lg": [ "Inter" ], "headline-lg-mobile": [ "Plus Jakarta Sans" ], "headline-sm": [ "Plus Jakarta Sans" ], "body-md": [ "Inter" ], "body-lg": [ "Inter" ], "label-md": [ "Inter" ], "headline-md": [ "Plus Jakarta Sans" ], "headline-xl-mobile": [ "Plus Jakarta Sans" ], "body-sm": [ "Inter" ], "label-sm": [ "Inter" ], "headline-xl": [ "Plus Jakarta Sans" ], "headline-lg": [ "Plus Jakarta Sans" ] }, "fontSize": { "label-lg": [ "14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "headline-lg-mobile": [ "24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "700" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-lg": [ "16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-md": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-xl-mobile": [ "30px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "800" } ], "body-sm": [ "12px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.05em", "fontWeight": "700" } ], "headline-xl": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.025em", "fontWeight": "800" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-gutter flex items-center gap-space-sm"><div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container shadow-sm"><span class="material-symbols-outlined text-[20px]">rocket_launch</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">SocialLaunch</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Studio CMS</span></div></div><div class="px-gutter my-space-sm"><div class="bg-surface-container rounded-lg px-space-sm py-space-xs flex items-center justify-between"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Workspace</span><span class="inline-flex items-center gap-space-xs font-label-sm text-label-sm text-tertiary-container font-bold"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span>Pro Enterprise</span></div></div><nav class="flex flex-col gap-space-xs px-space-sm mt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><div class="px-space-sm py-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Plataforma</span></div><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-all bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="constructor-cms" href="#"><span class="material-symbols-outlined text-[20px]">layers</span><span>Constructor CMS</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="look-and-feel-generator" href="#"><span class="material-symbols-outlined text-[20px]">palette</span><span>Look &amp; Feel Generator</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="media-library" href="#"><span class="material-symbols-outlined text-[20px]">perm_media</span><span>Media Library</span></a><div class="px-space-sm pt-space-md pb-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Canales de Venta</span></div><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="vitrina-publica-preview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-[20px]">storefront</span><span>Vitrina Pública</span></div><span class="font-label-sm text-label-sm bg-tertiary-container text-on-tertiary px-space-xs py-0.5 rounded">Live</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="campaign-telemetry" href="#"><span class="material-symbols-outlined text-[20px]">query_stats</span><span>Campaign Telemetry</span></a></nav></div><div class="p-space-sm border-t border-transparent"><div class="bg-surface-container rounded-lg p-space-sm flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col"><span class="font-label-md text-label-md font-semibold text-on-surface">Alejandra Silva</span><span class="font-label-sm text-label-sm text-on-surface-variant">Admin</span></div></div><button class="p-space-xs rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high" type="button"><span class="material-symbols-outlined text-[18px]">more_vert</span></button></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="inline-flex items-center gap-space-xs bg-tertiary-container/10 px-space-sm py-1 rounded-full"><span class="w-2 h-2 rounded-full bg-tertiary-container animate-ping"></span><span class="w-2 h-2 rounded-full bg-tertiary-container -ml-3"></span><span class="font-label-sm text-label-sm text-tertiary-container font-bold tracking-wide">⚡ EN VIVO / LIVE</span></div><div class="relative flex items-center w-80"><span class="material-symbols-outlined absolute left-space-sm text-on-surface-variant text-[18px]">search</span><input class="w-full bg-surface-container-lowest text-on-surface font-body-sm text-body-sm pl-9 pr-14 py-space-xs rounded-lg shadow-none outline-none focus:ring-2 focus:ring-primary-container transition-all" placeholder="Buscar campañas, módulos o assets..." type="text"/><span class="absolute right-space-sm font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-1.5 py-0.5 rounded font-mono">⌘K</span></div></div><div class="flex items-center gap-space-md"><a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all shadow-none" data-path="vitrina-publica-preview" href="#"><span class="material-symbols-outlined text-[16px] text-tertiary-container">visibility</span><span>Ver Vitrina Pública</span><span class="material-symbols-outlined text-[16px]">arrow_outward</span></a><button class="relative p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-error"></span></button><button class="p-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">tune</span></button><div class="flex items-center gap-space-sm pl-space-sm border-l border-transparent"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden xl:flex flex-col text-left"><span class="font-label-md text-label-md font-semibold text-on-surface leading-tight">Alejandra Silva</span><span class="font-label-sm text-label-sm text-tertiary-container font-medium">Super Admin</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="p-margin flex flex-col gap-space-lg max-w-[1720px] mx-auto w-full">
+<!-- Top Command & Status Bar -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline bg-surface-container px-2 py-0.5 rounded">Console v3.8.4</span>
+<span class="text-outline font-label-sm text-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-tertiary-container font-semibold flex items-center gap-1">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary-container"></span> CDN Edge Node: US-East (Miami)
+          </span>
+</div>
+<h1 class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">
+          Bienvenida de nuevo, Alejandra Silva <span class="font-body-md text-body-md text-on-surface-variant font-normal">(Admin Principal)</span>
+</h1>
+</div>
+<div class="flex flex-wrap items-center gap-space-md">
+<!-- Interactive Master Switch -->
+<div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-xl shadow-inner">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold text-on-surface flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container animate-pulse"></span>
+              Campaña En Vivo
+            </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tráfico Redirigiendo a Vitrina Pública</span>
+</div>
+<button aria-pressed="true" class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full bg-tertiary-container transition-colors duration-200 ease-in-out focus:outline-none ml-space-xs" id="masterTrafficSwitch" onclick="toggleMasterSwitch()" type="button">
+<span class="translate-x-6 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-surface-container-lowest shadow-md ring-0 transition duration-200 ease-in-out mt-0.5" id="masterSwitchKnob"></span>
+</button>
+</div>
+<!-- Universal Search -->
+<div class="relative w-72">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full bg-surface-container-low font-body-sm text-body-sm text-on-surface pl-9 pr-12 py-2 rounded-lg outline-none focus:ring-2 focus:ring-primary-container transition-all" placeholder="Buscar campaña, lead, pixel o bloque..." type="text"/>
+<span class="absolute right-2.5 top-2 font-mono text-[11px] font-semibold text-on-surface-variant bg-surface-container px-1.5 py-0.5 rounded shadow-sm">⌘K</span>
+</div>
+<!-- Date Range Filter & Export -->
+<div class="flex items-center gap-space-xs bg-surface-container-low p-1 rounded-lg">
+<button class="inline-flex items-center gap-1.5 px-space-sm py-1.5 rounded bg-surface-container-lowest shadow-sm font-label-md text-label-md text-on-surface" type="button">
+<span class="material-symbols-outlined text-[16px] text-primary">calendar_today</span>
+<span>Últimos 7 días (18 Nov - 25 Nov, 2025)</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</button>
+<button class="inline-flex items-center gap-1 px-space-md py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Exportar Reporte Completo</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Analytical KPI Strip (4 Columns) -->
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Tráfico Central</span>
+<span class="font-label-md text-label-md font-medium text-on-surface-variant mt-0.5">Clics Totales en Bio / Vitrina</span>
+</div>
+<span class="w-10 h-10 rounded-lg bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">ads_click</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-space-md">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">48,290</span>
+<span class="inline-flex items-center font-label-sm text-label-sm text-tertiary-container bg-tertiary-container/10 px-1.5 py-0.5 rounded font-bold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span> +24.8%
+          </span>
+</div>
+<!-- Micro Sparkline SVG -->
+<div class="mt-space-md pt-space-xs">
+<div class="flex items-end justify-between h-9 gap-1">
+<div class="w-full bg-primary/20 rounded-t h-[40%] hover:bg-primary transition-colors"></div>
+<div class="w-full bg-primary/30 rounded-t h-[55%] hover:bg-primary transition-colors"></div>
+<div class="w-full bg-primary/25 rounded-t h-[35%] hover:bg-primary transition-colors"></div>
+<div class="w-full bg-primary/45 rounded-t h-[70%] hover:bg-primary transition-colors"></div>
+<div class="w-full bg-primary/60 rounded-t h-[65%] hover:bg-primary transition-colors"></div>
+<div class="w-full bg-primary/80 rounded-t h-[85%] hover:bg-primary transition-colors"></div>
+<div class="w-full bg-primary-container rounded-t h-[100%] shadow-sm"></div>
+</div>
+<div class="flex justify-between text-[10px] text-outline mt-1 font-label-sm">
+<span>18 Nov</span>
+<span>21 Nov</span>
+<span>Hoy</span>
+</div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Conversión Mensajería</span>
+<span class="font-label-md text-label-md font-medium text-on-surface-variant mt-0.5">Leads WhatsApp Directo</span>
+</div>
+<span class="w-10 h-10 rounded-lg bg-tertiary-container/15 flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-space-md">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">3,842</span>
+<span class="inline-flex items-center font-label-sm text-label-sm text-tertiary-container bg-tertiary-container/10 px-1.5 py-0.5 rounded font-bold">
+<span class="material-symbols-outlined text-[14px]">north_east</span> +18.2% hoy
+          </span>
+</div>
+<div class="mt-space-md flex flex-col gap-1.5 bg-surface-container-low p-2.5 rounded-lg">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface">
+<span>Conversión Clic-a-WhatsApp</span>
+<span class="font-bold text-tertiary-container">7.95%</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 79.5%"></div>
+</div>
+<span class="text-[11px] text-on-surface-variant font-body-sm">Meta objetivo mensual: 8.5% alcanzado</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Calidad de Navegación</span>
+<span class="font-label-md text-label-md font-medium text-on-surface-variant mt-0.5">Tasa de Rebote Promedio</span>
+</div>
+<span class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">speed</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-space-md">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">24.1%</span>
+<span class="inline-flex items-center font-label-sm text-label-sm text-tertiary-container bg-tertiary-container/10 px-1.5 py-0.5 rounded font-bold">
+<span class="material-symbols-outlined text-[14px]">south</span> -5.4% óptimo
+          </span>
+</div>
+<div class="mt-space-md">
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant mb-1">
+<span>Retención de Sesión (&gt;45s)</span>
+<span class="font-bold text-on-surface">75.9%</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 flex overflow-hidden">
+<div class="bg-primary-container h-full" style="width: 76%"></div>
+<div class="bg-surface-dim h-full" style="width: 24%"></div>
+</div>
+<span class="font-body-sm text-[11px] text-outline mt-1.5 block">Tiempo medio en vitrina: 1m 54s</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Eficiencia Publicitaria</span>
+<span class="font-label-md text-label-md font-medium text-on-surface-variant mt-0.5">ROAS Integrado Multicanal</span>
+</div>
+<span class="w-10 h-10 rounded-lg bg-secondary-container/60 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">query_stats</span>
+</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-space-md">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">4.8x</span>
+<span class="font-label-sm text-label-sm text-tertiary-container bg-tertiary-container/10 px-1.5 py-0.5 rounded font-bold">
+            +0.6x vs periodo ant.
+          </span>
+</div>
+<div class="mt-space-md grid grid-cols-2 gap-space-xs text-center">
+<div class="bg-surface-container-low p-2 rounded-lg">
+<span class="font-label-sm text-[11px] text-outline block">CPL Promedio</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">USD 0.84</span>
+</div>
+<div class="bg-surface-container-low p-2 rounded-lg">
+<span class="font-label-sm text-[11px] text-outline block">Gasto Total 7D</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface">$3,227.28</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Section: 60% Leads & Telemetry Table | 40% Media & CDN Pipeline -->
+<section class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Column Left: 60% (7 cols on 12-col grid) -->
+<div class="xl:col-span-7 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-surface">Registro de Leads y Tráfico en Tiempo Real</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono bg-surface-container px-2 py-1 rounded">Polling: 5s activo</span>
+</div>
+<!-- Filter Tabs -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm">
+<div class="inline-flex p-1 bg-surface-container-low rounded-lg gap-1">
+<button class="tab-btn px-3 py-1.5 rounded-md font-label-md text-label-md bg-surface-container-lowest shadow-sm text-on-surface font-semibold" type="button">Hoy (32)</button>
+<button class="tab-btn px-3 py-1.5 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" type="button">Últimos 7 Días</button>
+<button class="tab-btn px-3 py-1.5 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" type="button">WhatsApp Directo</button>
+<button class="tab-btn px-3 py-1.5 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" type="button">Formularios Web</button>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-1.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant" title="Filtro Avanzado" type="button">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+</button>
+<button class="p-1.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant" title="Refrescar" type="button">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+<!-- Dense Responsive Table Container -->
+<div class="overflow-x-auto mt-space-sm rounded-lg">
+<table class="w-full text-left font-body-sm text-body-sm">
+<thead class="bg-surface-container-low font-label-md text-label-md text-on-surface-variant">
+<tr>
+<th class="py-2.5 px-3">Fecha / Hora</th>
+<th class="py-2.5 px-3">Origen Pauta</th>
+<th class="py-2.5 px-3">Lead Ofuscado</th>
+<th class="py-2.5 px-3">Campaña Activa</th>
+<th class="py-2.5 px-3">Estado</th>
+<th class="py-2.5 px-3 text-right">Acción Rápida</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface">
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-3 whitespace-nowrap">
+<div class="font-medium">10:48 AM</div>
+<div class="text-[11px] text-outline">Hace 2m</div>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 bg-surface-container px-2 py-0.5 rounded font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-on-surface">music_note</span> TikTok Ads
+                    </span>
+</td>
+<td class="py-3 px-3 font-mono font-medium whitespace-nowrap">
+                    +51 987***123
+                  </td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="font-medium">BlackFriday_Direct_V2</span>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-container/15 text-tertiary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span> Contactado
+                    </span>
+</td>
+<td class="py-3 px-3 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded bg-tertiary-container text-on-tertiary hover:opacity-90" title="Iniciar WhatsApp" type="button">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant" title="Ver Detalle" type="button">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-3 whitespace-nowrap">
+<div class="font-medium">10:39 AM</div>
+<div class="text-[11px] text-outline">Hace 11m</div>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 bg-secondary-container/50 px-2 py-0.5 rounded font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">photo_camera</span> Instagram Reels
+                    </span>
+</td>
+<td class="py-3 px-3 font-mono font-medium whitespace-nowrap">
+                    +57 312***844
+                  </td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="font-medium">Promo_Influencer_IG</span>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span> Cotizado
+                    </span>
+</td>
+<td class="py-3 px-3 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded bg-tertiary-container text-on-tertiary hover:opacity-90" title="Iniciar WhatsApp" type="button">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant" title="Ver Detalle" type="button">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-3 whitespace-nowrap">
+<div class="font-medium">10:14 AM</div>
+<div class="text-[11px] text-outline">Hace 36m</div>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 bg-surface-container px-2 py-0.5 rounded font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">travel_explore</span> Google Ads
+                    </span>
+</td>
+<td class="py-3 px-3 font-mono font-medium whitespace-nowrap">
+                    +52 554***910
+                  </td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="font-medium">Search_High_Intent</span>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-container text-on-tertiary font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[12px]">verified</span> Cerrado
+                    </span>
+</td>
+<td class="py-3 px-3 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded bg-tertiary-container text-on-tertiary hover:opacity-90" title="Iniciar WhatsApp" type="button">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant" title="Ver Detalle" type="button">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-3 whitespace-nowrap">
+<div class="font-medium">09:55 AM</div>
+<div class="text-[11px] text-outline">Hace 55m</div>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1.5 bg-surface-container px-2 py-0.5 rounded font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-outline">link</span> Tráfico Directo
+                    </span>
+</td>
+<td class="py-3 px-3 font-mono font-medium whitespace-nowrap">
+                    +56 941***332
+                  </td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="font-medium">Organic_Bio_Link</span>
+</td>
+<td class="py-3 px-3 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Pendiente
+                    </span>
+</td>
+<td class="py-3 px-3 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded bg-tertiary-container text-on-tertiary hover:opacity-90" title="Iniciar WhatsApp" type="button">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant" title="Ver Detalle" type="button">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Micro summary footer -->
+<div class="flex items-center justify-between pt-space-md text-[12px] text-on-surface-variant">
+<span>Mostrando 4 de 32 capturas de leads directos hoy</span>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 bg-surface-container rounded font-label-sm text-label-sm hover:bg-surface-container-high" type="button">Anterior</button>
+<button class="px-2 py-1 bg-primary text-on-primary rounded font-label-sm text-label-sm" type="button">1</button>
+<button class="px-2 py-1 bg-surface-container rounded font-label-sm text-label-sm hover:bg-surface-container-high" type="button">2</button>
+<button class="px-2 py-1 bg-surface-container rounded font-label-sm text-label-sm hover:bg-surface-container-high" type="button">Siguiente</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Column Right: 40% (5 cols on 12-col grid) -->
+<div class="xl:col-span-5 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-lg bg-primary-container/15 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">cloud_sync</span>
+</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">Gestor de Medios &amp; CDN</h3>
+<span class="font-label-sm text-label-sm text-outline">Sharp Compression Engine v0.32</span>
+</div>
+</div>
+<button class="inline-flex items-center gap-1 bg-primary text-on-primary px-space-sm py-1.5 rounded-lg font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">add_photo_alternate</span>
+<span>+ Cargar Nuevo Banner</span>
+</button>
+</div>
+<!-- SSD Cloud Meter -->
+<div class="bg-surface-container-low p-space-sm rounded-lg my-space-sm">
+<div class="flex items-center justify-between font-label-sm text-label-sm mb-1.5">
+<span class="text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">hard_drive</span> Almacenamiento SSD Cloud
+              </span>
+<span class="font-mono text-on-surface">1.2 GB / 10.0 GB <strong class="text-primary">(12% utilizado)</strong></span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 12%"></div>
+</div>
+<div class="flex justify-between text-[11px] text-outline mt-1 font-body-sm">
+<span>8.8 GB libres disponibles</span>
+<span class="text-tertiary-container font-medium">Brotli + WebP forzado</span>
+</div>
+</div>
+<!-- 4-Grid Thumbnail Asset Showcase -->
+<div class="grid grid-cols-2 gap-space-sm mt-space-sm">
+<!-- Asset 1 -->
+<div class="group relative bg-surface-container rounded-lg overflow-hidden shadow-sm flex flex-col">
+<div class="h-28 w-full overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="High quality dynamic product mockups showcasing mobile landing page hero image with vibrant blue accents and premium minimalist aesthetics in sleek studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoqYJYlovHQ_mEQGiWgL1ZCN1tew0oMpSYeISi3Z0p8pEL6diwQmyeOp1kQqdoTRlwoVm8_P3t7iHTditoZ6co38CX8BvhaTmn4dJWbxkVHW1qW77y5r2w2l6e6PhBhmggZNbz2NbzjF6D5ZCN8nIdg6k9iw7rCTCyoA8CAiEXSC2kJfkh9r8EzNkBawteGFEcjrOvy34xQ3v8nAdAVNgkaecAFC-utZ1Fud8u78XIBl3a9UK8hrL3"/>
+<span class="absolute top-1.5 left-1.5 bg-inverse-surface/90 text-inverse-on-surface font-label-sm text-[10px] px-1.5 py-0.5 rounded font-mono shadow">
+                  Sharp: -78% | 42 KB | WebP
+                </span>
+</div>
+<div class="p-2 bg-surface-container-lowest flex items-center justify-between">
+<div class="truncate">
+<span class="font-label-md text-label-md font-semibold text-on-surface block truncate">banner_hero_promo_nov.webp</span>
+<span class="text-[11px] text-outline">1080 x 1350 px</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Asset 2 -->
+<div class="group relative bg-surface-container rounded-lg overflow-hidden shadow-sm flex flex-col">
+<div class="h-28 w-full overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Modern neon style lifestyle sale badge for black friday ecommerce campaign with bold typography and crisp dark emerald backdrop lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6IozkdZ-oDFuq42kT7Mv4uGASBFsIp6Le-37i1jDsrLG6bMFqehjXRHpl9aJhA9JhCoSqceB_8Npf7mtaWOp5gW_aNtH9CYDk4jh2MD3f2VyCVAv3JR0mjkmizkYGhGIWygLLJmpsaUDDZJaYD8cKtsW6CzBdiCELGw2f37FdnlB7msCRQbw5Iw8IcxNpTkzR6c210Vzi0za9ZNMyRIz-JOAIbU0ftRj_m4FIFu0lt91IzT_q0yxQ"/>
+<span class="absolute top-1.5 left-1.5 bg-inverse-surface/90 text-inverse-on-surface font-label-sm text-[10px] px-1.5 py-0.5 rounded font-mono shadow">
+                  Sharp: -65% | 38 KB | WebP
+                </span>
+</div>
+<div class="p-2 bg-surface-container-lowest flex items-center justify-between">
+<div class="truncate">
+<span class="font-label-md text-label-md font-semibold text-on-surface block truncate">cta_floating_ribbon.webp</span>
+<span class="text-[11px] text-outline">800 x 400 px</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Asset 3 -->
+<div class="group relative bg-surface-container rounded-lg overflow-hidden shadow-sm flex flex-col">
+<div class="h-28 w-full overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Satisfied user testimonial avatar portrait shot in ultra sharp detail with neutral corporate studio backdrop and natural light balance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMDKNSC2J4ft4HJJ84sw82eZ0_FyVK3IF7pcTc3_UKJVVTFmj9q3KUmJCYok32o0z_5Jhe3aNZR7zZBdftzPHiqT0ntrh9_ATs8wESU_l0KxBAH2mh_1F-cvAYt_Q9gKw9mKSyPvSa_qEZ8b9_iHzGC5YZ9TH7VVbIZbOBpPvvC64-9kqm0esC9kwB4nBa6xWEOuzNqb5aXj1as6b_yPupazQeEo2PpQm1dym3iVKAiV35PGAmZagd"/>
+<span class="absolute top-1.5 left-1.5 bg-inverse-surface/90 text-inverse-on-surface font-label-sm text-[10px] px-1.5 py-0.5 rounded font-mono shadow">
+                  Sharp: -82% | 29 KB | WebP
+                </span>
+</div>
+<div class="p-2 bg-surface-container-lowest flex items-center justify-between">
+<div class="truncate">
+<span class="font-label-md text-label-md font-semibold text-on-surface block truncate">review_profile_avatar.webp</span>
+<span class="text-[11px] text-outline">500 x 500 px</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Asset 4 -->
+<div class="group relative bg-surface-container rounded-lg overflow-hidden shadow-sm flex flex-col">
+<div class="h-28 w-full overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Ultra modern link in bio showcase product card render with sleek gradient backdrop and clear commercial presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTzPawXWHvkXWbKiT1hbljjIXGWUt59ll5VVZdrHx-MpeEgW8dZjgLXUM3Zak9QQFzqHopY8CdnASxaHouaGbR6A54HMmP-bCyY7wiMnTK6XNFBYRYiUyQ3VDJFHiZYRmtpS8sfcQBPQgdkNJpZ1hJNYi_KPsIH06dmILOizIuE-H6d41AMhZp8yo8AK7U9gPLNXFkllQ5OihngP-1-HNHziDI4nsYxw12MB-iLEAKR4XcgRAXTPei"/>
+<span class="absolute top-1.5 left-1.5 bg-inverse-surface/90 text-inverse-on-surface font-label-sm text-[10px] px-1.5 py-0.5 rounded font-mono shadow">
+                  Sharp: -74% | 45 KB | WebP
+                </span>
+</div>
+<div class="p-2 bg-surface-container-lowest flex items-center justify-between">
+<div class="truncate">
+<span class="font-label-md text-label-md font-semibold text-on-surface block truncate">catalog_showcase_01.webp</span>
+<span class="text-[11px] text-outline">1080 x 1080 px</span>
+</div>
+<button class="text-on-surface-variant hover:text-primary" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-xs text-center">
+<a class="inline-flex items-center gap-1 font-label-md text-label-md text-primary hover:text-primary-container font-semibold" href="#">
+              Explorar 46 recursos adicionales en Media Library <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom DevOps & Technical Integrations Row (3-Column Bento Grid) -->
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-space-md">
+<!-- Card 1: Advertising Pixels & Server-Side CAPI -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="w-9 h-9 rounded-lg bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</span>
+<span class="inline-flex items-center gap-1 bg-tertiary-container/10 text-tertiary-container px-2 py-0.5 rounded-full font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span> CAPI Sincronizado
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-2">Píxeles de Meta Ads &amp; TikTok Ads</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Conversiones Server-Side activas (Conversions API). Desduplicación de eventos por LeadID con 99.4% de coincidencia validada.
+          </p>
+</div>
+<div class="mt-space-md flex flex-col gap-2 bg-surface-container-low p-space-sm rounded-lg font-mono text-[11px]">
+<div class="flex justify-between items-center text-on-surface">
+<span>Meta Pixel (ID: 884102941)</span>
+<span class="text-tertiary-container font-bold">200 OK • 12ms</span>
+</div>
+<div class="flex justify-between items-center text-on-surface">
+<span>TikTok Events API (ID: TT-90214)</span>
+<span class="text-tertiary-container font-bold">200 OK • 18ms</span>
+</div>
+<div class="flex justify-between items-center text-outline text-[10px]">
+<span>Último Ping: 10:49:12 UTC-5</span>
+<a class="text-primary underline" href="#">Ver Logs CAPI</a>
+</div>
+</div>
+</div>
+<!-- Card 2: CRM & Spreadsheets Syncer -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="w-9 h-9 rounded-lg bg-tertiary-container/15 flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined text-[20px]">sync_alt</span>
+</span>
+<span class="inline-flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant font-semibold">
+              Cada 60 segundos
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-2">Exportador Automático de Leads</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Sincronización bidireccional inmediata con HubSpot CRM, Zoho, Google Sheets y descargas batch en formato Excel XLSX.
+          </p>
+</div>
+<div class="mt-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low text-on-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-tertiary-container">table_view</span>
+<span class="font-label-md text-label-md font-semibold">Google Sheets Principal</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary-container font-bold">3,842 filas sincronizadas</span>
+</div>
+<button class="w-full inline-flex items-center justify-center gap-1.5 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">cloud_download</span>
+<span>Descargar Snapshot Excel (.xlsx)</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Webhooks & REST Endpoints -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="w-9 h-9 rounded-lg bg-primary-container/15 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">webhook</span>
+</span>
+<span class="font-mono text-[11px] text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">
+              HMAC SHA-256
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface mt-2">Webhooks Node.js &amp; REST Endpoints</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Disparadores de eventos en tiempo real hacia microservicios backend y pasarelas de pago (`lead.created`, `order.completed`).
+          </p>
+</div>
+<div class="mt-space-md flex flex-col gap-2 bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between font-mono text-[11px] text-on-surface">
+<span class="truncate max-w-[210px] text-outline">https://api.sociallaunch.io/v1/wh/lead</span>
+<button class="text-primary hover:underline font-label-sm text-label-sm" type="button">Copiar</button>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant pt-1 font-body-sm">
+<span>Estado: <strong>99.98% entregabilidad</strong></span>
+<span class="text-tertiary-container font-semibold">0 fallas</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script>
+  function toggleMasterSwitch() {
+    const btn = document.getElementById('masterTrafficSwitch');
+    const knob = document.getElementById('masterSwitchKnob');
+    const isChecked = btn.getAttribute('aria-pressed') === 'true';
+
+    if (isChecked) {
+      btn.setAttribute('aria-pressed', 'false');
+      btn.classList.remove('bg-tertiary-container');
+      btn.classList.add('bg-secondary');
+      knob.classList.remove('translate-x-6');
+      knob.classList.add('translate-x-1');
+    } else {
+      btn.setAttribute('aria-pressed', 'true');
+      btn.classList.remove('bg-secondary');
+      btn.classList.add('bg-tertiary-container');
+      knob.classList.remove('translate-x-1');
+      knob.classList.add('translate-x-6');
+    }
+  }
+
+  // Client-side visual tab switcher for leads table
+  document.querySelectorAll('.tab-btn').forEach(button => {
+    button.addEventListener('click', function() {
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-surface-container-lowest', 'shadow-sm', 'text-on-surface', 'font-semibold');
+        btn.classList.add('text-on-surface-variant');
+      });
+      this.classList.remove('text-on-surface-variant');
+      this.classList.add('bg-surface-container-lowest', 'shadow-sm', 'text-on-surface', 'font-semibold');
+    });
+  });
+</script></main></div></body></html>
