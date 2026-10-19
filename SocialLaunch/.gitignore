@@ -1,0 +1,34 @@
+# Dependencias de Node.js
+node_modules/
+*/node_modules/
+
+# Archivos de entorno y credenciales sensibles
+.env
+.env.*
+!.env.example
+*.env
+*/.env
+*/.env.*
+!*/.env.example
+
+# Compilaciones de Frontend y Backend
+.next/
+*/.next/
+dist/
+build/
+out/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de subida de prueba
+uploads/*
+!uploads/.gitkeep
+*/uploads/*
+!*/uploads/.gitkeep
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
